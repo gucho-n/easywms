@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="shipin.css">
+    <link rel="stylesheet" href="{{ asset('css/translate.css') }}">
     <title>出荷登録</title>
 
 </head>
@@ -12,16 +12,17 @@
     <header>
         <div class="header-name">
           <p>〇〇さん</p>
-        <div>
+        </div>
         <div class=header-auth>
           <p>権限〇〇</p>
         </div>
         <div class=header-logout>
         　<p>ログアウト</p>
         </div>
+    </header>
     <main>
     <div class="title-container">
-        <p>入庫登録</p>
+        <p>ロケーション登録</p>
     </div>
     <div class="main-container">
         <p>得意先</p>
@@ -29,9 +30,11 @@
         <p>ケース数</p>
         <p>ロケーション指定</p>
         <p>引当名</p>
+
+        <p>登録</p>
+        <p>引当</p>
     </div>
-    <p>登録</p>
-    <p>引当</p>
+ 
     </main>
 
 </body>

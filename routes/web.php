@@ -21,9 +21,15 @@ use Illuminate\Support\Facades\Route;
 //     return view('side');
 // });
 
+// Route::get('/', function () {
+//     return view('shipin');
+// });
+
 Route::get('/', function () {
-    return view('shipin');
+    return view('translate');
 });
+
+
 
 Auth::routes();
 

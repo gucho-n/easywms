@@ -1,0 +1,67 @@
+/* ヘッダー */
+header{
+    height: 10vh;
+    display: flex;
+    background-color: wheat;
+
+}
+.header-name{
+    background-color: yellow;
+    width: 20%;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.header-auth{
+    background-color: aquamarine;
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.header-logout{
+    background-color: brown;
+    width: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* サイドメニュー */
+article{
+    width: 20%;
+    height: 90vh;
+    
+    /* 何故かpaddingが違う */
+
+    background-color: burlywood;
+
+}
+
+.menu-container{
+    border-color: cornsilk;
+    background-color: crimson;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+}
+
+.title-container{
+
+    text-align: center;
+    padding: 10px;
+    font-size: 32px;
+    
+}
+.main-container{
+    text-align: center;
+    padding: 10px;
+    font-size: 16px;
+
+}
+
+*{
+    margin: 0;
+}
