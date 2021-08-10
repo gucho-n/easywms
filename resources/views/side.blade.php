@@ -12,7 +12,7 @@
     <header>
         <div class="header-name">
           <p>〇〇さん</p>
-        <div>
+        </div>
         <div class=header-auth>
           <p>権限〇〇</p>
         </div>
@@ -20,19 +20,34 @@
         　<p>ログアウト</p>
         </div>
     </header>
+
+ 
     <article>
-        <ul>
-            <li>入庫登録</li>
-            <li>出庫引当</li>
-            <li>在庫移動</li>
-            <li>指示書出力</li>
-            <li>ロケーション登録</li>
-            <li>ユーザー登録</li>
-        </ul>
+        
+        <div class="menu-container">
+            <p>入庫登録</p>
+         </div>
+        <div class="menu-container">
+            <p>出庫引当</p>
+        </div>
+        <div class="menu-container">
+            <p>在庫移動</p>
+         </div>
+        <div class="menu-container">
+            <p>指示書出力</p>
+        </div>
+        <div class="menu-container">
+            <p>ロケーション登録</p>
+        </div>
+        <div class="menu-container">
+            <p>ユーザー登録</p>
+        </div>
+        <!-- ulをdivで囲ったら失敗した。 -->
     </article>
-    <main>
-        <p></p>
+    <main>  
     </main>
+    
+
 
 </body>
 </html>
