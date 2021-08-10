@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="shipin.css">
-    <title>入庫登録</title>
+    <link rel="stylesheet" href="side.css">
+    <title>サイドメニュー</title>
 
 </head>
 <body>
@@ -19,18 +19,19 @@
         <div class=header-logout>
         　<p>ログアウト</p>
         </div>
+    </header>
+    <article>
+        <ul>
+            <li>入庫登録</li>
+            <li>出庫引当</li>
+            <li>在庫移動</li>
+            <li>指示書出力</li>
+            <li>ロケーション登録</li>
+            <li>ユーザー登録</li>
+        </ul>
+    </article>
     <main>
-    <div class="title-container">
-        <p>入庫登録</p>
-    </div>
-    <div class="main-container">
-        <p>得意先</p>
-        <p>製品名</p>
-        <p>ケース数</p>
-        <p>備考</p>
-    </div>
-    <p>決定</p>
-    
+        <p></p>
     </main>
 
 </body>
