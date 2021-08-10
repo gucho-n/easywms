@@ -1,0 +1,11 @@
+header{
+    display: flex;
+   
+    background-color: wheat;
+}
+p{
+    color: tomato;
+}
+*{
+    margin: 0;
+}

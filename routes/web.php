@@ -17,7 +17,7 @@ use Illuminate\Support\Facades\Route;
 //     return view('auth/login');
 // });
 Route::get('/', function () {
-    return view('shipin');
+    return view('side');
 });
 
 Auth::routes();
