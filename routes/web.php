@@ -13,27 +13,27 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-// Route::get('/', function () {
-//     return view('auth/login');
-// });
-
-// Route::get('/', function () {
-//     return view('side');
-// });
-
-// Route::get('/', function () {
-//     return view('shipin');
-// });
-
-// Route::get('/', function () {
-//     return view('translate');
-// });
-
-// Route::get('/', function () {
-//     return view('shipout');
-// });
-
 Route::get('/', function () {
+    return view('auth/login');
+});
+
+Route::get('/side', function () {
+    return view('side');
+});
+
+Route::get('/shipin', function () {
+    return view('shipin');
+});
+
+Route::get('/translate', function () {
+    return view('translate');
+});
+
+Route::get('/shipout', function () {
+    return view('shipout');
+});
+
+Route::get('/list', function () {
     return view('list');
 });
 
