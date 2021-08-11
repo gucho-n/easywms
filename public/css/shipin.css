@@ -1,3 +1,8 @@
+/* リセットCSS */
+*{
+    margin: 0;
+}
+
 /* ヘッダー部分 */
 header{
     height: 10vh;
@@ -49,17 +54,7 @@ article{
     height: 10vh;
 }
 
-/* メインメニュー */
-.title-container{
-    text-align: center;
-    padding: 10px;
-    font-size: 32px;
-}
-.main-container{
-    text-align: center;
-    padding: 10px;
-    font-size: 16px;
-}
-*{
-    margin: 0;
-}
+
+
+
+

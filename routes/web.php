@@ -25,8 +25,16 @@ use Illuminate\Support\Facades\Route;
 //     return view('shipin');
 // });
 
+// Route::get('/', function () {
+//     return view('translate');
+// });
+
+// Route::get('/', function () {
+//     return view('shipout');
+// });
+
 Route::get('/', function () {
-    return view('translate');
+    return view('list');
 });
 
 
