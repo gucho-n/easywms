@@ -74,10 +74,34 @@
                 </div>
             </div>
         </nav>
+        <div class="main">
+        <!-- サイドメニュー書き込み -->
+            <article>        
+                <div class="menu-container">
+                    <p>入庫登録</p>
+                </div>
+                <div class="menu-container">
+                    <p>出庫引当</p>
+                </div>
+                <div class="menu-container">
+                    <p>在庫移動</p>
+                </div>
+                <div class="menu-container">
+                    <p>指示書出力</p>
+                </div>
+                <div class="menu-container">
+                    <p>ロケーション登録</p>
+                </div>
+                <div class="menu-container">
+                    <p>ユーザー登録</p>
+                </div>
+            </article>
 
-        <main class="py-4">
-            @yield('content')
-        </main>
+
+            <main class="py-4">
+                @yield('content')
+            </main>
+        </div>
     </div>
 </body>
 </html>

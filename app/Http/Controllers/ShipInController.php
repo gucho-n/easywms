@@ -13,7 +13,7 @@ class ShipInController extends Controller
      */
     public function index()
     {
-        //
+        return view('shipin');
     }
 
     /**

@@ -17,12 +17,10 @@ Route::get('/', function () {
     return view('auth/login');
 });
 
+Route::get('/shipin','App\Http\Controllers\ShipInController@index'); 
+
 Route::get('/side', function () {
     return view('side');
-});
-
-Route::get('/shipin', function () {
-    return view('shipin');
 });
 
 Route::get('/translate', function () {
