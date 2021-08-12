@@ -1,37 +1,27 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{{ asset('css/list.css') }}">
-    <title>ピッキングリスト</title>
+@extends('layouts.app')
+@section('content')
 
-</head>
-<body>
-    <header>
-        <div class="header-name">
-          <p>〇〇さん</p>
-        </div>
-        <div class=header-auth>
-          <p>権限〇〇</p>
-        </div>
-        <div class=header-logout>
-        　<p>ログアウト</p>
-        </div>
-    </header>
-    <main>
     <div class="title-container">
-        <p>ピッキングリスト</p>
+        <p class="shipin-title">ピッキングリスト</p>
     </div>
     <div class="main-container">
-        <p>得意先</p><p>□</p>
-        <p>製品</p><p>□</p>
-        <p>ケース数</p><p>□</p>
+    <div class="main-containts">
+        <a>得意先</a><a>得意先名が入る</a><a><form action="入力" class="shipin-form"><input type="checkbox" class="shipin-input"></form></a>
+        <a>製品名</a><a>製品名が入る</a>
+            <form action="入力" class="shipin-form">
+                <input type="checkbox" class="shipin-input">
+            </form>
+        <a>ケース数</a><a>ケース数が入る</a>
+            <form action="入力" class="shipin-form">
+                <input type="checkbox" class="shipin-input">
+            </form>
+        <a>ロケーション</a><a>ロケーション</a>
+            <form action="入力" class="shipin-form">
+            <input type="checkbox" class="shipin-input">
+            </form>
+            <input type="submit" class="submit-btn">
     </div>
-    <p>決定</p>
     
-    </main>
+</div>
 
-</body>
-</html>
+@endsection

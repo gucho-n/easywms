@@ -34,7 +34,9 @@ Route::get('/shipout', function () {
 Route::get('/list', function () {
     return view('list');
 });
-
+Route::get('/location', function () {
+    return view('location');
+});
 
 
 Auth::routes();

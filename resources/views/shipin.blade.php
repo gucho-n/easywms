@@ -1,9 +1,10 @@
 @extends('layouts.app')
 @section('content')
+<div class="title-container">
+    <p class="shipin-title">入庫登録</p>
+</div>
 <div class="main-container">
-    <div class="title-container">
-        <p class="shipin-title">入庫登録</p>
-    </div>
+
     <div class="main-containts">
         <p>入庫元</p>
             <form action="入力" class="shipin-form">
@@ -21,8 +22,9 @@
             <form action="入力" class="shipin-form">
                 <input type="text" class="shipin-input">
             </form>
+        <input type="submit" class="submit-btn">
     </div>
-    <input type="submit" class="submit-btn">
+    
 </div>
 <!-- <style>
 

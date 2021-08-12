@@ -15,14 +15,13 @@ display: flex;
  /* サイドメニュー */
 article{
   width: 20%;
-  height: 90vh;
+  height: 100vh;
   
   /* 何故かpaddingが違う */
 
   background-color: burlywood;
 
 }
-
 .menu-container{
   border-color: cornsilk;
   background-color: crimson;
@@ -47,29 +46,30 @@ article{
 /* ここにメインコンテンツを記入。py-4はarticleと並列 */
 .py-4{
   width: 80%;
+}
+
+.title-container{
+  width: 100%;  
+}
+
+.shipin-title{
+  font-size: 16px;
+  margin-left: 10px;
+}
+.main-container{
   display: flex;
   justify-content: center;
 }
-.main-container{
-  width: 80%;
-  background-color: gainsboro;
-  border-radius: 30px;
-}
-.title-container{
-  width: 100%;
-  text-align: center;
-}
+
 .main-containts{
   background-color: var(--cyan);
-  padding: 10px;
-  
-}
-.shipin-title{
-  font-size: 32px;
+  width: 80%;
+  padding: 20px 10px;
+  border-radius: 10px;
 }
 
 .shipin-input{
-  width: 70%;
+  width: 100%;
 }
 .shipin-form{
   text-align: center;
@@ -80,6 +80,65 @@ article{
   font-size: 15px;
 }
 /* 中央ここまで */
+
+/* 出荷引当ここから */
+.title-container{
+  width: 100%;  
+}
+
+.shipin-title{
+  font-size: 16px;
+  margin-left: 10px;
+}
+.main-container{
+  display: flex;
+  justify-content: center;
+}
+
+.main-containts{
+  background-color: var(--cyan);
+  width: 80%;
+  padding: 20px 10px;
+  border-radius: 10px;
+}
+
+.shipin-input{
+  width: 100%;
+}
+.shipin-form{
+  text-align: center;
+}
+.submit-btn{
+  margin: 5px 20px;
+  float: right;
+  font-size: 15px;
+}
+
+
+
+/* 出荷引当ここまで */
+
+/* 在庫移動ここから */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* 在庫移動ここまで */
+
+/* ピッキングリストここから */
+/* ピッキングリストここまで*/
+
  /* 自作CSS　ここまで */
 :root {
   --blue: #3490dc;

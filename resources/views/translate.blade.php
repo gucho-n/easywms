@@ -1,41 +1,53 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="{{ asset('css/translate.css') }}">
-    <title>出荷登録</title>
+@extends('layouts.app')
+@section('content')
 
-</head>
-<body>
-    <header>
-        <div class="header-name">
-          <p>〇〇さん</p>
+<div class="title-container">
+        <p class="shipin-title">在庫移動</p>
+</div>
+<div class="main-container">
+
+    <div class="main-containts">
+        <div class="show-container">
+            <a>製品名</a><a>ケース数</a><a>ロケーション</a></br>
+            <a>製品名</a><a>ケース数</a><a>ロケーション</a>
         </div>
-        <div class=header-auth>
-          <p>権限〇〇</p>
-        </div>
-        <div class=header-logout>
-        　<p>ログアウト</p>
-        </div>
-    </header>
-    <main>
-    <div class="title-container">
-        <p>ロケーション登録</p>
+        <p>ロケーションを指定</p>
+            <form action="入力" class="shipin-form">
+                <input type="text" class="shipin-input" placeholder="製品名">
+            </form>
+            <form action="入力" class="shipin-form">
+                <input type="text" class="shipin-input" placeholder="ケース数">
+            </form>
+            <form action="入力" class="shipin-form">
+                <input type="text" class="shipin-input" placeholder="ロケーション">
+            </form>
+            <input type="submit" class="submit-btn">
+
+        <p>ロケーションを移動</p>
+            <form action="入力" class="shipin-form">
+                <input type="text" class="shipin-input" placeholder="製品名">
+            </form>
+            <form action="入力" class="shipin-form">
+                <input type="text" class="shipin-input" placeholder="ケース数">
+            </form>
+            <form action="入力" class="shipin-form">
+                <input type="text" class="shipin-input" placeholder="ロケーション">
+            </form>
+            <input type="submit" class="submit-btn">
     </div>
-    <div class="main-container">
-        <p>得意先</p>
-        <p>製品名</p>
-        <p>ケース数</p>
-        <p>ロケーション指定</p>
-        <p>引当名</p>
+  
+</div>
+<!-- <style>
 
-        <p>登録</p>
-        <p>引当</p>
-    </div>
- 
-    </main>
+.main-container{
+    text-align: center;
+}
+.title-container{
+    text-align: center;
+}
+.main-containets{
+    text-align: center;
+}
 
-</body>
-</html>
+</style> -->
+@endsection

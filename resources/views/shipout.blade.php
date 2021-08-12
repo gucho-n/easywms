@@ -1,49 +1,41 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="shipin.css">
-    <link rel="stylesheet" href="{{ asset('css/shipout.css') }}">
-    <title>出荷登録</title>
-
-</head>
-<body>
-    <header>
-        <div class="header-name">
-          <p>〇〇さん</p>
-        </div>
-        <div class=header-auth>
-          <p>権限〇〇</p>
-        </div>
-        <div class=header-logout>
-        　<p>ログアウト</p>
-        </div>
-</header>
-    <main>
-    <div class="title-container">
-        <p>出荷登録</p>
-    </div>
-    <div class="main-container">
-        <p>ロケーション</p>
-        <p>製品</p>
+@extends('layouts.app')
+@section('content')
+<div class="title-container">
+    <p class="shipin-title">出庫引当</p>
+</div>
+<div class="main-container">
+    <div class="main-containts">
+        <p>行き先</p>
+            <form action="入力" class="shipin-form">
+                <input type="text" class="shipin-input">
+            </form>
+        <p>製品名</p>
+            <form action="入力" class="shipin-form">
+                    <input type="text" class="shipin-input">
+            </form>
         <p>ケース数</p>
+            <form action="入力" class="shipin-form">
+                    <input type="text" class="shipin-input">
+            </form>
+        <p>ロケーションを指定</p>
+            <form action="入力" class="shipin-form">
+                <input type="text" class="shipin-input">
+            </form>
+        <input type="submit" class="submit-btn">
     </div>
-    <div class="before-location">
-        <p>ロケーション</p>
-        <p>製品</p>
-        <p>ケース数</p>
-    </div>
-    <div class="after-location">
-        <p>ロケーション</p>
-        <p>製品</p>
-        <p>ケース数</p>
-    </div>
+    
+</div>
+<!-- <style>
 
-    <p>絞り込み</p>
-    <p>実行</p>
-    </main>
+.main-container{
+    text-align: center;
+}
+.title-container{
+    text-align: center;
+}
+.main-containets{
+    text-align: center;
+}
 
-</body>
-</html>
+</style> -->
+@endsection
