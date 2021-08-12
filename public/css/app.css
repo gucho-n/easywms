@@ -30,8 +30,56 @@ article{
   justify-content: center;
   align-items: center;
   height: 10vh;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.25);
+  width: 100%;
+}
+.menu-container-user{
+  
+  border-color: cornsilk;
+  background-color: crimson;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 10vh;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.25);
+}
+/* 中央ここから */
+/* ここにメインコンテンツを記入。py-4はarticleと並列 */
+.py-4{
+  width: 80%;
+  display: flex;
+  justify-content: center;
+}
+.main-container{
+  width: 80%;
+  background-color: gainsboro;
+  border-radius: 30px;
+}
+.title-container{
+  width: 100%;
+  text-align: center;
+}
+.main-containts{
+  background-color: var(--cyan);
+  padding: 10px;
+  
+}
+.shipin-title{
+  font-size: 32px;
 }
 
+.shipin-input{
+  width: 70%;
+}
+.shipin-form{
+  text-align: center;
+}
+.submit-btn{
+  margin: 5px 20px;
+  float: right;
+  font-size: 15px;
+}
+/* 中央ここまで */
  /* 自作CSS　ここまで */
 :root {
   --blue: #3490dc;
