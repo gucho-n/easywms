@@ -75,33 +75,8 @@
             </div>
         </nav>
         <div class="main">
-        <!-- サイドメニュー書き込み -->
-            <article> 
-                <form action="/shipin" >
-                    <button type="button"　name="入庫登録"　class="menu-container">入庫登録</button>
-                </form> 
 
-                <form action="/shipout" >
-                    <button type="button"　name="入庫登録"　class="menu-container">出庫引当</button>
-                </form> 
 
-                <form action="" >
-                    <button type="button"　name="入庫登録"　class="menu-container">在庫移動</button>
-                </form> 
-
-                <form action="" >
-                    <button type="button"　name="入庫登録"　class="menu-container">指示書出力</button>
-                </form> 
-
-               <form action="" >
-                    <button type="button"　name="入庫登録"　class="menu-container">ロケーション登録</button>
-                </form> 
-
-                <form action="" >
-                    <button type="button"　name="入庫登録"　class="menu-container">ユーザー登録</button>
-                </form> 
-
-            </article>
             <!-- 美しい書き方がわからない -->
             <main class="py-4">
                 @yield('content')
