@@ -20,18 +20,7 @@ article{
   /* 何故かpaddingが違う */
 
   background-color: burlywood;
-
-}
-.menu-container{
-  border-color: cornsilk;
-  background-color: crimson;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 10vh;
-  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.25);
-  width: 100%;
-}
+/* 
 .menu-container-user{
   
   border-color: cornsilk;
@@ -41,7 +30,7 @@ article{
   align-items: center;
   height: 10vh;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.25);
-}
+} */
 /* 中央ここから */
 /* ここにメインコンテンツを記入。py-4はarticleと並列 */
 .py-4{

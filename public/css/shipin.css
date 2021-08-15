@@ -2,18 +2,45 @@
 *{
     margin: 0;
 }
-
-
-.main-container{
-    text-align: center;
-}
+/* メインコンテンツ */
 .title-container{
-    text-align: center;
-}
-.main-containets{
-    text-align: center;
+   
+    margin: 10px;
 }
 
+.shipin-title{
+    font-size: 16px;
+}
+.main-container{
+    width: 80%;
+}
+.main-section{
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
 
+}
+.main-containts{
+    width: 60%;
+    background-color: skyblue;
+}
+.shipin-form{
 
+}
+.shipin-input{
+    width: 60%;
+    margin-left: 10%;
+}
+
+.input-name{
+    margin: 10px;
+}
+
+.submit-container{
+text-align: right;
+margin: 10px;
+}
+.submit-btn{
+    width: 20%;
+}
 

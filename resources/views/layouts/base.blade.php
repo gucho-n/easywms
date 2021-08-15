@@ -5,7 +5,7 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="{{ asset('css/shipin') }}">
+        <link rel="stylesheet" href="{{ asset('css/shipin.css') }}">
         <link rel="stylesheet" href="{{ asset('css/base.css') }}">
         <title>aaa</title>
     </head>
@@ -24,7 +24,7 @@
 <!-- サイドメニュー書き込み -->
     <main>  
         <article> 
-            <form action="/shipin" >
+            <form action="/shipin" class=sidemenu-container>
                 <button type="button"　name="入庫登録"　class="menu-container">入庫登録</button>
             </form> 
 
