@@ -2,68 +2,51 @@
 *{
     margin: 0;
 }
-
-/* ヘッダー */
-header{
-    height: 10vh;
-    display: flex;
-    background-color: wheat;
-
-}
-.header-name{
-    background-color: yellow;
-    width: 20%;
-    
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-}
-.header-auth{
-    background-color: aquamarine;
-    width: 60%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.header-logout{
-    background-color: brown;
-    width: 20%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-/* サイドメニュー */
-article{
-    width: 20%;
-    height: 90vh;
-    
-    /* 何故かpaddingが違う */
-
-    background-color: burlywood;
-
+/* メインコンテンツ */
+.translate-title-container{
+    margin: 10px;
 }
 
-/* .menu-container{
-    border-color: cornsilk;
-    background-color: crimson;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 10vh;
-} */
-
-.title-container{
-
-    text-align: center;
-    padding: 10px;
-    font-size: 32px;
-    
-}
-.main-container{
-    text-align: center;
-    padding: 10px;
+.translate-title{
     font-size: 16px;
+}
+.translate-container{
+    width: 80%;
+    
+}
 
+.translate-main-container{
+    display: flex;
+    justify-content: center;
+    background-color: saddlebrown;
+}
+.translate-main-section{
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+
+}
+.translate-main-containts{
+    width: 60%;
+    background-color: skyblue;
+}
+.translate-show-container{
+    background-color: sandybrown;
+}
+.translate-input{
+    width: 60%;
+    margin-left: 10%;
+}
+
+.translate-input-name{
+    margin: 10px;
+}
+
+.translate-submit-container{
+text-align: right;
+margin: 10px;
+}
+.translate-submit-btn{
+    width: 20%;
 }
 

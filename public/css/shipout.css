@@ -2,58 +2,64 @@
 *{
     margin: 0;
 }
-
-/* ヘッダー部分 */
-header{
-    height: 10vh;
-    display: flex;
-    background-color: wheat;
-
+/* メインコンテンツ */
+.shipout-title-container{
+   
+    margin: 10px;
 }
-.header-name{
-    background-color: yellow;
-    width: 20%;
-    
-    display: flex;
-    justify-content: center;
-    align-items: center;
 
+.shipout-title{
+    font-size: 16px;
 }
-.header-auth{
+.shipout-main-container{
+    width: 80%;
+}
+.shipout-main-section{
+    display: flex;
     background-color: aquamarine;
+}
+.shipout-input-section{
+    margin: 30px;
+    border-radius: 5%;
+    display: flex;
+    justify-content: center;
+    background-color: gray;
     width: 60%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+
 }
-.header-logout{
-    background-color: brown;
+.shipout-main-containts{
+    width: 70%;
+ 
+}
+.shipout-form{
+   
+}
+.shipout-input{
+    width: 80%;
+    margin-left: 10%;
+}
+
+.shipout-input-name{
+    margin: 10px;
+}
+
+.shipout-submit-container{
+text-align: right;
+margin: 10px;
+}
+.shipout-submit-btn{
     width: 20%;
+}
+.shipout-result-section{
+    background-color: aqua;
+    width: 30%;
+    
+}
+.shipout-confirm-btn-container{
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: right;
 }
+.shipout-confirm-btn{
+width: 20%;
 
-/* メインメニュー */
-.title-container{
-    text-align: center;
-    padding: 10px;
-    font-size: 32px;
-}
-.main-container{
-    text-align: center;
-    padding: 10px;
-    font-size: 16px;
-}
-
-.before-location{
-    text-align: center;
-    padding: 10px;
-    font-size: 16px;
-}
-
-.after-location{
-    text-align: center;
-    padding: 10px;
-    font-size: 16px;
 }

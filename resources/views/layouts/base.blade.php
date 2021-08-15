@@ -6,7 +6,10 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="{{ asset('css/shipin.css') }}">
+        <link rel="stylesheet" href="{{ asset('css/shipout.css') }}">
+        <link rel="stylesheet" href="{{ asset('css/translate.css') }}">
         <link rel="stylesheet" href="{{ asset('css/base.css') }}">
+        <link rel="stylesheet" href="{{ asset('css/list.css') }}">
         <title>aaa</title>
     </head>
  <!-- ヘッダー書き込み -->

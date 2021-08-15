@@ -1,47 +1,19 @@
-/* リセットCSS */
-*{
-    margin: 0;
-}
 
-/* ヘッダー部分 */
-header{
-    height: 10vh;
-    display: flex;
-    background-color: wheat;
-
-}
-.header-name{
-    background-color: yellow;
-    width: 20%;
-    
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
-}
-.header-auth{
-    background-color: aquamarine;
-    width: 60%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.header-logout{
-    background-color: brown;
-    width: 20%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
 
 /*  */
-.title-container{
-    text-align: center;
-    padding: 10px;
-    font-size: 32px;
-}
-.main-container{
-    text-align: center;
+.list-title-container{
     padding: 10px;
     font-size: 16px;
+}
+.list-main-container{
+ 
+    display: flex;
+    justify-content: center;
+
+}
+.list-main-containts{
+    width: 80%;
+ 
+    background-color: silver;
+    
 }

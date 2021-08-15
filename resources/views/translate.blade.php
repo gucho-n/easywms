@@ -1,41 +1,48 @@
-@extends('layouts.app')
+@extends('layouts.base')
 @section('content')
+<div class="translate-container">
+    <div class="translate-title-container">
+            <p class="translate-title">在庫移動</p>
+    </div>
+<div class="translate-main-container">
 
-<div class="title-container">
-        <p class="shipin-title">在庫移動</p>
-</div>
-<div class="main-container">
-
-    <div class="main-containts">
-        <div class="show-container">
-            <a>製品名</a><a>ケース数</a><a>ロケーション</a></br>
+    <div class="translate-main-containts">
+        <div class="translate-show-container">
+          <div class="translate-show-container-title">
             <a>製品名</a><a>ケース数</a><a>ロケーション</a>
+          </div>
+          <div class="translate-show-container-main">
+              <div class="translate-show-container-main-detail">
+                <a>製品名</a><a>ケース数</a><a>ロケーション</a>
+              </div>
+          </div>
         </div>
         <p>ロケーションを指定</p>
-            <form action="入力" class="shipin-form">
-                <input type="text" class="shipin-input" placeholder="製品名">
+            <form action="入力" class="translate-form">
+                <input type="text" class="translate-input" placeholder="製品名">
             </form>
-            <form action="入力" class="shipin-form">
-                <input type="text" class="shipin-input" placeholder="ケース数">
+            <form action="入力" class="translate-form">
+                <input type="text" class="translate-input" placeholder="ケース数">
             </form>
-            <form action="入力" class="shipin-form">
-                <input type="text" class="shipin-input" placeholder="ロケーション">
+            <form action="入力" class="translate-form">
+                <input type="text" class="translate-input" placeholder="ロケーション">
             </form>
             <input type="submit" class="submit-btn">
 
         <p>ロケーションを移動</p>
-            <form action="入力" class="shipin-form">
-                <input type="text" class="shipin-input" placeholder="製品名">
+            <form action="入力" class="translate-form">
+                <input type="text" class="translate-input" placeholder="製品名">
             </form>
-            <form action="入力" class="shipin-form">
-                <input type="text" class="shipin-input" placeholder="ケース数">
+            <form action="入力" class="translate-form">
+                <input type="text" class="translate-input" placeholder="ケース数">
             </form>
-            <form action="入力" class="shipin-form">
-                <input type="text" class="shipin-input" placeholder="ロケーション">
+            <form action="入力" class="translate-form">
+                <input type="text" class="translate-input" placeholder="ロケーション">
             </form>
-            <input type="submit" class="submit-btn">
+            <input type="submit" class="translate-submit-btn">
     </div>
   
+</div>
 </div>
 <!-- <style>
 
