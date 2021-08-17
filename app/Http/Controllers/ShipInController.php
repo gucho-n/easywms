@@ -35,12 +35,15 @@ class ShipInController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
-    {
-        $item = Stock\App\Item;
-        $item->name = '名前';
-        $item->save();
-        
+    public function create(Request $request)
+    {   
+        $inputs = $request->all();
+        Stock::create($inputs);
+     
+
+        \Session::flash('err_meg','入庫完了');
+        return redirect('/shipin');
+
     }
 
     /**

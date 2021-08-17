@@ -17,11 +17,9 @@ Route::get('/', function () {
     return view('auth/login');
 });
 
-Route::get('/shipin','App\Http\Controllers\ShipInController@index'); 
+Route::get('/shipin','App\Http\Controllers\ShipInController@index')->name('shipin'); 
 
-Route::get('/side', function () {
-    return view('side');
-});
+Route::post('store', 'App\Http\Controllers\ShipInController@create')->name('store');
 
 Route::get('/translate', function () {
     return view('translate');
@@ -37,6 +35,7 @@ Route::get('/list', function () {
 Route::get('/location', function () {
     return view('location');
 });
+
 
 
 Auth::routes();
