@@ -28,4 +28,16 @@
         </div>        
     </div>
 </div>
+@foreach($items as $item)
+<tr>
+<th>{{$item->id}}</th>
+<th>{{$item->item}}</th>
+<th>{{$item->location}}</th>
+</tr>
+@endforeach
+    
+
+
+
+
 @endsection

@@ -2,6 +2,9 @@
 
 namespace App\Http\Controllers;
 
+//モデルとの紐付け↓例）App\Models\Stock、Stockまでのパスを記述すること
+use App\Models\Stock;
+use App\Models\User;
 use Illuminate\Http\Request;
 
 class ShipInController extends Controller
@@ -11,10 +14,21 @@ class ShipInController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
-    {
-        return view('shipin');
+    //requestを入力
+    public function index(Request $request)
+    {   
+
+          //モデル→変数→ビューへ
+        $items = Stock::all();
+
+        $user = auth()->user();
+        // dd($items);
+        return view ('shipin', compact('items'));
+
+
+        // return view ('shipin', ['items' => $items]);
     }
+
 
     /**
      * Show the form for creating a new resource.
@@ -23,7 +37,10 @@ class ShipInController extends Controller
      */
     public function create()
     {
-        //
+        $item = Stock\App\Item;
+        $item->name = '名前';
+        $item->save();
+        
     }
 
     /**

@@ -12,10 +12,10 @@
         <link rel="stylesheet" href="{{ asset('css/list.css') }}">
         <title>aaa</title>
     </head>
- <!-- ヘッダー書き込み -->
+    
     <header>
         <div class="header-name">
-            <p>〇〇さん</p>
+            <p>名前</p>
         </div>
         <div class=header-auth>
             <p>権限〇〇</p>
@@ -27,33 +27,33 @@
 <!-- サイドメニュー書き込み -->
     <main>  
         <article> 
-            <form action="/shipin" class=sidemenu-container>
-                <button type="button"　name="入庫登録"　class="menu-container">入庫登録</button>
+            <form class=sidemenu-container>
+                <button type="button"　name="入庫登録"　class="menu-container" onclick="location.href='./shipin'" >入庫登録</button>
             </form> 
 
-            <form action="/shipout" >
-                <button type="button"　name="入庫登録"　class="menu-container">出庫引当</button>
-            </form> 
-
-            <form action="" >
-                <button type="button"　name="入庫登録"　class="menu-container">在庫移動</button>
+            <form action="./shipout.blade.php">
+                <button type="button"　name="入庫登録"　class="menu-container" onclick="location.href='./shipout'">出庫引当</button>
             </form> 
 
             <form action="" >
-                <button type="button"　name="入庫登録"　class="menu-container">指示書出力</button>
+                <button type="button"　name="入庫登録"　class="menu-container" onclick="location.href='./translate'">在庫移動</button>
             </form> 
 
             <form action="" >
-                <button type="button"　name="入庫登録"　class="menu-container">ロケーション登録</button>
+                <button type="button"　name="入庫登録"　class="menu-container" onclick="location.href='./list'">指示書出力</button>
             </form> 
 
             <form action="" >
-                <button type="button"　name="入庫登録"　class="menu-container">ユーザー登録</button>
+                <button type="button"　name="入庫登録"　class="menu-container" onclick="location.href='./location'">ロケーション登録</button>
+            </form> 
+
+            <form action="" >
+                <button type="button"　name="入庫登録"　class="menu-container" onclick="location.href='./register'">ユーザー登録</button>
             </form> 
 
         </article>
         @yield('content')
     </main>
         
-   
+    
         
