@@ -9,6 +9,6 @@ class ShipInController extends Controller
 {
 // 現在ログインしているユーザー情報の取得
 $user = Auth::user();
-dd($user);
+
 
 }

@@ -21,13 +21,14 @@ Route::get('/shipin','App\Http\Controllers\ShipInController@index')->name('shipi
 
 Route::post('store', 'App\Http\Controllers\ShipInController@create')->name('store');
 
+Route::get('/shipout','App\Http\Controllers\ShipoutController@index')->name('shipout'); 
+
+Route::post('shipoutStore', 'App\Http\Controllers\ShipoutController@create')->name('shipoutStore');
+
 Route::get('/translate', function () {
     return view('translate');
 });
 
-Route::get('/shipout', function () {
-    return view('shipout');
-});
 
 Route::get('/list', function () {
     return view('list');

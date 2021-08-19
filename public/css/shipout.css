@@ -51,8 +51,9 @@ margin: 10px;
     width: 20%;
 }
 .shipout-result-section{
-    background-color: aqua;
+
     width: 30%;
+    padding: 2%;
     
 }
 .shipout-confirm-btn-container{
@@ -62,4 +63,8 @@ margin: 10px;
 .shipout-confirm-btn{
 width: 20%;
 
+}
+.shipout-result-container{
+    background-color: yellow;
+    list-style-type: none;
 }

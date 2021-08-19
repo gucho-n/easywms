@@ -18,7 +18,7 @@ class ShipInController extends Controller
     public function index(Request $request)
     {   
 
-          //モデル→変数→ビューへ
+        //モデル→変数→ビューへ
         $items = Stock::all();
 
         $user = auth()->user();
