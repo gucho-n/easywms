@@ -25,14 +25,10 @@ Route::get('/shipout','App\Http\Controllers\ShipoutController@index')->name('shi
 
 Route::post('shipoutStore', 'App\Http\Controllers\ShipoutController@create')->name('shipoutStore');
 
-Route::get('/translate', function () {
-    return view('translate');
-});
+Route::get('transport', 'App\Http\Controllers\TransportController@index')->name('transport');
 
+Route::get('list', 'App\Http\Controllers\ListController@index')->name('list');
 
-Route::get('/list', function () {
-    return view('list');
-});
 Route::get('/location', function () {
     return view('location');
 });

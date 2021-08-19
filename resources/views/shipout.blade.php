@@ -6,38 +6,40 @@
     </div>
     <div class="shipout-main-section">
         <div class="shipout-input-section">
-            <form  action="{{ route('shipoutStore') }}"　class="shipout-main-containts" method="post">
-                <p class=shipout-input-name>行き先</p>
-                    <div class="shipout-form">
-                        <input type="text" class="shipout-input" name="customer">
-                    </div>
-                <p class=shipout-input-name>品目名</p>
-                    <div class="shipout-form">
-                            <input type="text" class="shipout-input" name="item">
-                    </div>
-                <p class=shipout-input-name>ケース数</p>
-                    <div class="shipout-form">
-                        <input type="text" class="shipout-input" name="cases">
-                    </div>
-                <p class=shipout-input-name>ロケーション指定</p>
-                    <div class="shipout--form">
-                        <input type="text" class="shipout-input" name="location">
-                    </div>
-                    <div class="shipout-submit-container">
-                        <input type="submit" class="shipout-submit-btn">
-                    </div>
-                    @csrf
-            </form>        
+            <div class="shipout-main-containts">
+                <form  action="{{ route('shipoutStore') }}" method="post">
+                    <p class=shipout-input-name>行き先</p>
+                        <div class="shipout-form">
+                            <input type="text" class="shipout-input" name="customer">
+                        </div>
+                    <p class=shipout-input-name>品目名</p>
+                        <div class="shipout-form">
+                             <input type="text" class="shipout-input" name="item">
+                        </div>
+                    <p class=shipout-input-name>ケース数</p>
+                        <div class="shipout-form">
+                            <input type="text" class="shipout-input" name="cases">
+                        </div>
+                    <p class=shipout-input-name>ロケーション指定</p>
+                        <div class="shipout--form">
+                            <input type="text" class="shipout-input" name="location">
+                        </div>
+                        <div class="shipout-submit-container">
+                            <input type="submit" class="shipout-submit-btn">
+                        </div>
+                        @csrf
+                </form>  
+            </div>      
         </div>
         
         <div class="shipout-result-section">
-            <p>引当</p>
-            
+            <p class="hikiate-title">引当</p>         
         @foreach($results as $result)
             <ul class="shipout-result-container">
-                <li class="each-result">{{$result->customer}}{{$result->item}}{{$result->cases}}</li>        
+                <li class="each-result">{{$result->customer}}</li>        
             </ul>
         @endforeach
+
         </div>
      
     </div>

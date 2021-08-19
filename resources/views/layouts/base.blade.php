@@ -36,7 +36,7 @@
             </form> 
 
             <form action="" >
-                <button type="button"　name="入庫登録"　class="menu-container" onclick="location.href='./translate'">在庫移動</button>
+                <button type="button"　name="入庫登録"　class="menu-container" onclick="location.href='./transport'">在庫移動</button>
             </form> 
 
             <form action="" >

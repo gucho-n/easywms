@@ -30,32 +30,12 @@
                        <input type="text" class="shipin-input" name="other">
                     </div>
                     @csrf
-                    <input type="submit" class="submit-btn">
+                    <div class="shipout-submit-container">
+                        <input type="submit" class="submit-btn">
+                    </div>
+                   
                 </form>
 
-                <!-- <p class=input-name>製品名</p>
-                <form action="{{ route('store') }}" class="shipin-form">
-                    <input type="text" class="shipin-input" name="item">
-                </form>
-
-                <p class=input-name>ケース数</p>
-                <form action="{{ route('store') }}" class="shipin-form">
-                    <input type="text" class="shipin-input" name="cases">
-                </form>
-
-                <p class=input-name>ロケーション</p>
-                <form action="{{ route('store') }}" class="shipin-form">
-                    <input type="text" class="shipin-input" name="location">
-                </form>
-
-                <p class=input-name>備考</p>
-                <form action="{{ route('store') }}" class="shipin-form">
-                    <input type="text" class="shipin-input" name="other">
-                </form>
-            <form class="submit-container" action="{{ route('store') }}" method="post">
-            @csrf
-                <input type="submit" class="submit-btn">
-            </form> -->
         </div>        
     </div>
 </div>
