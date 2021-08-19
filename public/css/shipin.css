@@ -2,45 +2,47 @@
 *{
     margin: 0;
 }
+.shipin-main-container{
+    width: 80%;
+}
 /* メインコンテンツ */
-.title-container{
-   
-    margin: 10px;
+.shipin-title-container{  
+    margin: 2% 5%;
 }
 
 .shipin-title{
-    font-size: 16px;
+    font-size: 32px;
 }
-.main-container{
-    width: 80%;
-}
-.main-section{
-    margin-top: 30px;
+
+.shipin-main-section{
+    margin-top: 1%;
     display: flex;
     justify-content: center;
 
 }
-.main-containts{
-    width: 60%;
-    background-color: skyblue;
+.shipin-main-containts{
+    width: 80%;
+    background-color: rgb(194, 218, 245);
+    opacity: 0.77;
 }
-.shipin-form{
 
-}
-.shipin-input{
+.shipin-input-box{
     width: 60%;
+    font-size: 20px;
     margin-left: 10%;
 }
+.shipin-input-name{
+    height: 10%;
+    padding: 2%;
+    font-size: 20px;
 
-.input-name{
-    margin: 10px;
 }
 
-.submit-container{
-text-align: right;
-margin: 10px;
+.shipin-input-submit-container{
+    text-align: right;
+    margin: 2%;
 }
-.submit-btn{
+.shipin-submit-btn{
     width: 20%;
 }
 

@@ -4,42 +4,50 @@
 }
 /* ヘッダ部分 */
 header{
-    height: 10vh;
+    height: 5vh;
     display: flex;
-    background-color: wheat;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.25);
+    background-color: ghostwhite;
 
 }
 .header-name{
-    background-color: yellow;
+ 
     width: 20%;
     
     display: flex;
     justify-content: center;
     align-items: center;
+    opacity: 0.68;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.25);
 
 }
 .header-auth{
-    background-color: aquamarine;
+
     width: 60%;
     display: flex;
     justify-content: center;
     align-items: center;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.25);
 }
 .header-logout{
-    background-color: brown;
+  
     width: 20%;
     display: flex;
     justify-content: center;
     align-items: center;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.25);
 }
 article{
-    width: 20%;
+    width: 15%;
     height: 90vh;
-    
-    /* 何故かpaddingが違う */
-
-    background-color: burlywood;
-
+   
+}
+.side-menu-container{
+    text-align: center;
+    margin: 2%;
+}
+.side-menu{
+    font-family: cursive;
 }
 
 main{
@@ -48,11 +56,13 @@ main{
 
 button{
   border-color: cornsilk;
-  background-color: crimson;
+  background-color: #eff1f3;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 10vh;
+  height: 6vh;
   box-shadow: 0 3px 6px rgba(0, 0, 0, 0.25);
   width: 100%;
+  font-size: 16px;
+  margin-top: 1%;
 }

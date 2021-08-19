@@ -27,6 +27,9 @@
 <!-- サイドメニュー書き込み -->
     <main>  
         <article> 
+            <h1 class="side-menu-container">
+                <p class="side-menu">Menu</p>
+            </h1>
             <form class=sidemenu-container>
                 <button type="button"　name="入庫登録"　class="menu-container" onclick="location.href='./shipin'" >入庫登録</button>
             </form> 
