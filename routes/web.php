@@ -29,9 +29,13 @@ Route::get('transport', 'App\Http\Controllers\TransportController@index')->name(
 
 Route::get('list', 'App\Http\Controllers\ListController@index')->name('list');
 
-Route::get('/location', function () {
-    return view('location');
-});
+Route::get('/shipout/{id}', 'App\Http\Controllers\ListController@update')->name('list');
+
+Route::get('/location','App\Http\Controllers\LocationController@index')->name('location');
+
+Route::post('/locationResister', 'App\Http\Controllers\LocationController@create')->name('locationResister');
+
+
 
 
 

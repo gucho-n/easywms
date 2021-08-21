@@ -30,3 +30,18 @@ Vue.component('example-component', require('./components/ExampleComponent.vue').
 const app = new Vue({
     el: '#app',
 });
+
+
+// app.js
+const express = require('express');
+const mysql = require('mysql');
+const connection = mysql.createConnection({
+  host: '127.0.0.1',
+  user: 'root',
+  password: 'No1s@tan',
+  database: 'easywms'
+});
+connection.connect((err) => {
+  if (err) throw err;
+  console.log('Connected!');
+});

@@ -28,5 +28,23 @@ class ShipoutController extends Controller
         \Session::flash('err_meg','');
         return redirect('/shipout');
     }
+    //データを渡して保存
+    public function update(Request $request)
+    {   
+        $inputs = $request->all();
+        Shipout::create($inputs);
+        
+    
+        \Session::flash('err_meg','');
+        return redirect('/shipout');
+    }
+
+
+
+
+
+
+
+
 
 }

@@ -1,19 +1,41 @@
 
-
+.list-container{
+    width: 80%;
+}
 /*  */
 .list-title-container{
-    padding: 10px;
-    font-size: 16px;
+    margin: 10%;
+    font-size: 32px;
+    text-align: center;
 }
+.list-title{
+    margin-top: 10px;
+}
+.list-heading{
+    margin-left: 10%;
+}
+.list-each-category-container{
+    padding-left: 20%;
+}
+
+
+
+.each-result{
+    
+}
+
+
+
 .list-main-container{
  
-    display: flex;
-    justify-content: center;
+
 
 }
 .list-main-containts{
-    width: 80%;
-    background-color: royalblue;
-    padding: 2%;
+    width: 60%;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.25);
+    margin: 5% auto;
+    height: 90vh;
+
     
 }

@@ -10,6 +10,10 @@
         <link rel="stylesheet" href="{{ asset('css/translate.css') }}">
         <link rel="stylesheet" href="{{ asset('css/base.css') }}">
         <link rel="stylesheet" href="{{ asset('css/list.css') }}">
+        <link rel="stylesheet" href="{{ asset('css/transport.css') }}">
+        <link rel="stylesheet" href="{{ asset('css/location.css') }}">
+        
+        
         <title>aaa</title>
     </head>
     

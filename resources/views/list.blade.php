@@ -1,30 +1,61 @@
 @extends('layouts.base')
 @section('content')
-<div class="translate-container">
-    <div class="list-title-container">
-        <p class="list-title">ピッキングリスト</p>
-    </div>
+<div class="list-container">
     <div class="list-main-container">
+
         <div class="list-main-containts">
+        <div class="list-title-container">
+            <p class="list-title">ピッキングリスト</p>
+        </div>
         @foreach($results as $result)
-            <p>得意先</p>
-                <li class="each-result">{{$result->shipto}}</li> 
-                  <form action="入力" class="shipin-form"><input type="checkbox" class="list-input"></form>
-                <p>製品名</p><p>{{$result->items}}</p>
-            <form action="入力" class="list-form">
-                <input type="checkbox" class="list-input">
-            </form>
-            <a>ケース数</a><a>{{$result->cases}}</a>
-                <form action="入力" class="list-form">
-                    <input type="checkbox" class="list-input">
-                </form>
-            <a>ロケーション</a><a>{{$result->locationfrom}}</a>
-                <form action="入力" class="list-form">
-                <input type="checkbox" class="list-input">
-                </form>
-                <input type="submit" class="list-btn">
+            <p class="list-heading">得意先</p>
+            <div class="list-each-category-container">
+                <p class="each-result">{{$result->shipto}}</p> 
+                <form action="入力" class="shipin-form"><input type="checkbox" class="list-input"></form><p>ピッキングしたらチェック</p>
+            </div>     
+            
+            <p class="list-heading">製品名</p>
+            <div class="list-each-category-container">
+                <p class="each-result">{{$result->items}}</p> 
+                <form action="入力" class="shipin-form"><input type="checkbox" class="list-input"></form><p>ピッキングしたらチェック</p>
+            </div>    
+
+            <p class="list-heading">ケース数</p>
+            <div class="list-each-category-container">
+                <p class="each-result">{{$result->cases}}</p> 
+                <form action="入力" class="shipin-form"><input type="checkbox" class="list-input"></form><p>ピッキングしたらチェック</p>
+            </div>    
+
+            <p class="list-heading">ロケーション</p>
+            <div class="list-each-category-container">
+                <p class="each-result">{{$result->locationfrom}}</p> 
+                <form action="入力" class="shipin-form"><input type="checkbox" class="list-input"></form><p>ピッキングしたらチェック</p>
+            </div>  
+
+            <div class=list-all-push>
+                <p>全てチェックしたら送信</p>
+                <form action="入力" class="shipin-form"><input type="button" class="list-input" value="送信"></form><p>
+            </div>
+
         @endforeach
+
         </div>
     </div>
 </div>
 @endsection
+
+
+1
+2
+3
+4
+5
+6
+7
+$('#checkBtn').click(function(){
+ 
+if ( $("input[type=checkbox]:not(:checked)").size() == 0 ) {
+           
+}else{
+     alert("すべてチェックされていません");
+}
