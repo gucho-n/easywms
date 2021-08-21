@@ -44,18 +44,3 @@
 </div>
 @endsection
 
-
-1
-2
-3
-4
-5
-6
-7
-$('#checkBtn').click(function(){
- 
-if ( $("input[type=checkbox]:not(:checked)").size() == 0 ) {
-           
-}else{
-     alert("すべてチェックされていません");
-}

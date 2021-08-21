@@ -6,6 +6,7 @@ namespace App\Http\Controllers;
 use App\Models\Stock;
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class ShipInController extends Controller
 {
@@ -21,9 +22,10 @@ class ShipInController extends Controller
         //モデル→変数→ビューへ
         $items = Stock::all();
 
-        $user = auth()->user();
-        // dd($items);
-        return view ('shipin', compact('items'));
+        $users = auth()->user();
+        
+
+        return view ('shipin', compact('items','users'));
 
 
         // return view ('shipin', ['items' => $items]);

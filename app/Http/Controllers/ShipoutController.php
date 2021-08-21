@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Shipout;
+use Illuminate\Support\Facades\Auth; //追加
 class ShipoutController extends Controller
 {
     public function index(Request $request)
@@ -11,8 +12,12 @@ class ShipoutController extends Controller
 
         //モデル→変数→ビューへ
         $results = Shipout::all();
+        
+        $users = auth()->user();
+       
+
    
-        return view ('shipout', compact('results'));
+        return view ('shipout', compact('results','users'));
        
         
 
@@ -38,6 +43,8 @@ class ShipoutController extends Controller
         \Session::flash('err_meg','');
         return redirect('/shipout');
     }
+
+    
 
 
 

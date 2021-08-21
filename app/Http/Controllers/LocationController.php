@@ -3,8 +3,9 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-
 use App\Models\Location;
+
+use Illuminate\Support\Facades\Auth;
 
 class LocationController extends Controller
 {
@@ -13,8 +14,8 @@ class LocationController extends Controller
 
         //モデル→変数→ビューへ
         $results = Location::all();
-   
-        return view ('location', compact('results'));
+        $users = auth()->user();
+        return view ('location', compact('results','users'));
        
     }
 

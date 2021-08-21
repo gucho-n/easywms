@@ -19,7 +19,9 @@
     
     <header>
         <div class="header-name">
-            <p>名前</p>
+            <nav class="login-username">
+              <p>ようこそ！{{$users->name}}さん</p>
+            </nav>
         </div>
         <div class=header-auth>
             <p>権限〇〇</p>
