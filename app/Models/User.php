@@ -20,6 +20,7 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'worker_id',
     ];
 
     /**
@@ -40,4 +41,17 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+
+    //明日ここからやって来ましょう
+    // 「１対多」の「多」側 → メソッド名は複数形
+//   public function workers()
+//   {
+//     return $this->hasMany('App\Models\Worker');
+//   }
+
+
+
+
+
+    
 }

@@ -37,7 +37,7 @@
         
             <ol class="shipout-result-container">
             @foreach($results as $result)
-                <li class="shipout-each-result"><a href="" {{$result->customer}}</a></li>
+                <li class="shipout-each-result"><a href="" >{{$result -> customer}}</a></li>
                 
             @endforeach       
             </ol>
@@ -54,6 +54,7 @@
 
 
 @endsection
+
 
 
 

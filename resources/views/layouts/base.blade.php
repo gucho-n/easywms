@@ -24,7 +24,7 @@
             </nav>
         </div>
         <div class=header-auth>
-            <p>権限〇〇</p>
+            <!-- <p>権限:{{$users->workers}}</p> -->
         </div>
         <div class=header-logout>
             <p>ログアウト</p>

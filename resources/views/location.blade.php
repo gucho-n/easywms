@@ -7,13 +7,13 @@
     <div class="location-main-container">
     <form action="入力" class="location-form">
             <p>ロケーション番号</p>               
-                    <input type="text" class="location-input">
+                    <input type="text" class="location-input" placeholder="例）1-1-1">
 
             <p>備考</p>
-                <form action="入力" class="location-form">
-                    <input type="text" class="location-input">
-                </form>
-            <p>
+            
+                    <input type="text" class="location-input" placeholder="狭い">
+        
+    
             <div class="location-submit-container">
                 <input type="submit" class="location-submit-btn" value="登録">
             </div>

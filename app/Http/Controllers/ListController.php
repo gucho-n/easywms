@@ -16,6 +16,7 @@ class ListController extends Controller
         $results = ResultList::all();
         
         $users = auth()->user();
+
         return view ('list', compact('results','users'));
     }
 }

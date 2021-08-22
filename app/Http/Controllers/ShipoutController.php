@@ -26,11 +26,21 @@ class ShipoutController extends Controller
 
     public function create(Request $request)
     {   
+        
         $inputs = $request->all();
-        Shipout::create($inputs);
+      
+        if($inputs['customer']==null || $inputs['item']==null || $inputs['cases']==null || $inputs['location']==null){
+            return redirect('/shipout')->with('flash_message', '入力フォームを入れてください');
+            \Session::flash('err_meg','');
+
+            
+        }else{
+            Shipout::create($inputs);
+        };
+       
         
     
-        \Session::flash('err_meg','');
+     
         return redirect('/shipout');
     }
     //データを渡して保存

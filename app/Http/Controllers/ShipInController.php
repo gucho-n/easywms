@@ -24,7 +24,7 @@ class ShipInController extends Controller
 
         $users = auth()->user();
         
-
+    
         return view ('shipin', compact('items','users'));
 
 
@@ -39,8 +39,47 @@ class ShipInController extends Controller
      */
     public function create(Request $request)
     {   
+        $items = Stock::all();
+       
         $inputs = $request->all();
-        Stock::create($inputs);
+
+        
+        // dd($inputs["item"]);
+
+
+
+        // ここに入れよう
+
+        foreach($items as $item){
+
+            if($item["item"] == $inputs["item"]){
+                print("正常");
+            }else{
+             
+                print("異常");
+            
+            }
+      
+
+        }
+
+
+
+        // これは一旦置いとく
+        // foreach($items as $item){
+        //     if ($item->item == $inputs->item && $item->location == $inputs->location){
+        //         \DB::table('stock')
+        //             ->where('id', $item)
+        //             ->update([
+        //             'cases' => ($item->cases)+($inputs->cases)
+        //          ]);
+        //     }else{
+        //             // if($inputs['item']==)
+        //         Stock::create($inputs);
+        //     }
+        // }
+
+    
      
 
         \Session::flash('err_meg','入庫完了');

@@ -2,12 +2,12 @@
 @section('content')
 <div class="list-container">
     <div class="list-main-container">
-
+        @foreach($results as $result)
         <div class="list-main-containts">
         <div class="list-title-container">
             <p class="list-title">ピッキングリスト</p>
         </div>
-        @foreach($results as $result)
+        
             <p class="list-heading">得意先</p>
             <div class="list-each-category-container">
                 <p class="each-result">{{$result->shipto}}</p> 
