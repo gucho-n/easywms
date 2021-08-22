@@ -52,11 +52,15 @@ class ShipInController extends Controller
 
         foreach($items as $item){
 
-            if($item["item"] == $inputs["item"]){
-                print("正常");
+            
+           
+            if(($item["item"] == $inputs["item"]) && ($item["location"] == $inputs["location"])){
+                $item["cases"] = $item["cases"] + $inputs["cases"];
+                print($item["cases"]);
+                $item->Update();
             }else{
              
-                print("異常");
+                Stock::create($inputs);
             
             }
       
