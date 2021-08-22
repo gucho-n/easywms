@@ -56,7 +56,6 @@ class ShipInController extends Controller
            
             if(($item["item"] == $inputs["item"]) && ($item["location"] == $inputs["location"])){
                 $item["cases"] = $item["cases"] + $inputs["cases"];
-                print($item["cases"]);
                 $item->Update();
             }else{
              
