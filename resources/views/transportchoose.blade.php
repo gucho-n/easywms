@@ -20,7 +20,7 @@
         @foreach($results as $result)
             <div class="transport-show-container-main">         
                 <div class="transport-show-container-main-detail">
-                    <p>{{$result->location}}</p>
+                    <p>{{$result->location[]}}</p>
                 </div>    
                 <div class="transport-show-container-main-detail">
                     <p>{{$result->item}}</p>
