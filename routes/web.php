@@ -35,7 +35,7 @@ Route::get('/location','App\Http\Controllers\LocationController@index')->name('l
 
 Route::post('/locationResister', 'App\Http\Controllers\LocationController@create')->name('locationResister');
 
-Route::get('/transport/choose[]', 'App\Http\Controllers\TransportController@show')->name('transportchoose');
+Route::post('/transportchoose', 'App\Http\Controllers\TransportController@create')->name('transportchoose');
 
 
 

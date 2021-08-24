@@ -20,4 +20,16 @@ class Stock extends Model
             
         ];
     }
+    /**
+     * ユーザーに関連する電話レコードを取得
+     */
+    public function stock()
+    {
+        return $this->hasOne('App\Models\Transport');
+    }
+
+
+
+
+
 }

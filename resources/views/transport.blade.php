@@ -37,37 +37,21 @@
 
 
         <p class="transport-focus-title">絞り込み</p>
-            <form action="{{ route('transportchoose') }}" class="transport-form">
-                <input type="text" class="transport-input" placeholder="ロケーション" name="chooselocation">
+            <form action="{{ route('transportchoose') }}" method="post">
+                <div class="trasnport-form">
+                    <input type="text" class="transport-input" placeholder="ロケーション" name="chooselocation">
+                </div>
+
+                <div class="trasnport-form">
+                    <input type="text" class="transport-input" placeholder="製品名" name="chooseitem">
+                </div>
+
+                <div class="transport-decide-btn">
+                    <input type="submit" class="transport-submit-btn">
+                </div>
+                @csrf
             </form>
 
-            <form action="入力" class="transport-form">
-                <input type="text" class="transport-input" placeholder="製品名" name="chooseitem">
-            </form>
-            <form action="入力" class="transport-form">
-                <input type="text" class="transport-input" placeholder="ケース数" name="choosecase">
-            </form>
-            <div class="transport-decide-btn">
-                <input type="submit" class="transport-submit-btn">
-            </div>
-
-        <p class="transport-focus-title">移動先</p>
-            
-            <form action="入力" class="transport-form">
-                <input type="text" class="transport-input" placeholder="ロケーション">
-            </form>
-
-            <form action="入力" class="transport-form">
-                <input type="text" class="transport-input" placeholder="製品名">
-            </form>
-            <form action="入力" class="transport-form">
-                <input type="text" class="transport-input" placeholder="ケース数">
-            </form>
-
-            <div class="transport-decide-btn">
-                <input type="submit" class="translate-submit-btn">
-            </div>
-    
     
     </div>
 </div>
