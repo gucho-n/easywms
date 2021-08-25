@@ -72,22 +72,25 @@ class TransportController extends Controller
             //上で選択した値
             $choosestocks = Transport::all();
 
-            foreach($nowstocks as $nowstock){
+            
                 
             foreach($choosestocks as $choosestock){
            
-            //    foreach($items as $item)
+         
                $choosestock->Stock->cases = $choosestock->Stock->cases - $inputs["tocases"];
            
                $choosestock->Stock->Update();
                
-               if($choosestock->Stock->location == $inputs["tolocation"]){
-                $choosestock->Stock->cases + $nowstock["cases"];
-                $nowstock->Update();
+               if(($choosestock->Stock->location == $inputs["tolocation"])&&($choosestock->Stock->item == $inputs["tolocation"])){
+                
+                $choosestock->Stock->cases = $choosestock->Stock->cases + $nowstock["cases"];
+                
+                $choosestock->Stock->cases->Update();
+                Transport::query()->delete();
                 
                }
 
-            }
+            
             }
             return redirect('/transport');
 
