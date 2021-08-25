@@ -41,7 +41,7 @@
 
 
         <p class="transport-focus-title">絞り込み</p>
-            <form action="{{ route('transportchoose') }}" method="post">
+            <form action="{{ route('transportchoose') }} "method="post">
                 <div class="trasnport-form">
                     <input type="text" class="transport-input" placeholder="ロケーション" name="chooselocation">
                 </div>
@@ -54,19 +54,21 @@
                 </div>
                 @csrf
             </form>
+
+
         <p class="transport-focus-title">移動先</p>
             
-            <form action="入力" class="transport-form">
-                <input type="text" class="transport-input" placeholder="ロケーション"　name="tolocation">
-            
-            <div class="trasnport-form">
-                <input type="text" class="transport-input" placeholder="ケース数"　name="tocases">
-            </div>
+                <form action="{{ route('transportdecide') }}" class="transport-form" method="post" enctype="multipart/form-data">
+                    <input type="text" class="transport-input" placeholder="ロケーション" name="tolocation">
+                
+                <div class="trasnport-form">
+                    <input type="text" class="transport-input" placeholder="ケース数" name="tocases">
+                </div>
 
-            <div class="transport-decide-btn">
-                <input type="submit" class="translate-submit-btn">
-            </div>
-    
+                <div class="transport-decide-btn">
+                    <input type="submit" class="translate-submit-btn">
+                </div>
+            @csrf
             </form>
     </div>
 </div>

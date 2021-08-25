@@ -37,6 +37,7 @@ Route::post('/locationResister', 'App\Http\Controllers\LocationController@create
 
 Route::post('/transportchoose', 'App\Http\Controllers\TransportController@create')->name('transportchoose');
 
+Route::post('transportdecide', 'App\Http\Controllers\TransportController@update')->name('transportdecide');
 
 
 

@@ -17,7 +17,7 @@ class TransportController extends Controller
         $users = auth()->user();
 
         return view ('transport', compact('results','users'));
-        // return view ('shipin', ['items' => $items]);
+        return view ('shipin', ['items' => $items]);
     }
     public function create(Request $request)
     {   
@@ -29,11 +29,11 @@ class TransportController extends Controller
         $nowstocks = Stock::all();
     
         $inputs = $request->all();
-        
+      
         foreach($nowstocks as $nowstock){ 
           
           
-        if($inputs["chooseitem"]==$nowstock["item"]){
+        if(($inputs["chooseitem"]==$nowstock["item"])&&($inputs["chooselocation"]==$nowstock["location"])){
 
             $inputs = array_merge($inputs,array('stock_id'=>$nowstock["id"]));
             Transport::create($inputs);  
@@ -42,6 +42,8 @@ class TransportController extends Controller
 
 
             return view ('/transportchoose', compact('choosestocks','users'));        
+        }else{
+            // return redirect('/transport');
         }
                   // if (($choosestock["chooselocation"]==$nowstock["location"])&&()){
                 //     dd($nowstock["id"]);
@@ -56,21 +58,45 @@ class TransportController extends Controller
         }
 
 
-    
-
-        
-        
-        // foreach($nowstocks as $nowstock){ 
-
-        // if ($choosestock["chooselocation"]==$nowstock["location"]) {
-        //     $nowstock["cases"] = $nowstock["cases"] - $choosestock["cases"];
-         
-        // }           
-            // dd($nowstock["location"]);
-
-
-
-
-        // }
     }
+
+        public function update(Request $request)
+        {
+            $users = auth()->user();
+            // 対象の在庫から、入力した数量の差を求めて、モデルに渡す, 最後にアップデート
+            //入力した値
+            $inputs = $request->all();
+
+            $nowstocks = Stock::all();
+            
+            //上で選択した値
+            $choosestocks = Transport::all();
+
+            foreach($nowstocks as $nowstock){
+                
+            foreach($choosestocks as $choosestock){
+           
+            //    foreach($items as $item)
+               $choosestock->Stock->cases = $choosestock->Stock->cases - $inputs["tocases"];
+           
+               $choosestock->Stock->Update();
+               
+               if($choosestock->Stock->location == $inputs["tolocation"]){
+                $choosestock->Stock->cases + $nowstock["cases"];
+                $nowstock->Update();
+                
+               }
+
+            }
+            }
+            return redirect('/transport');
+
+            
+
+
+
+            //
+        }
+
+
 }
