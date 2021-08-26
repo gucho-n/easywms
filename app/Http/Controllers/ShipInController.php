@@ -26,7 +26,7 @@ class ShipInController extends Controller
         
     
         return view ('shipin', compact('items','users'));
-
+        
 
         // return view ('shipin', ['items' => $items]);
     }
@@ -41,30 +41,29 @@ class ShipInController extends Controller
     {   
         $items = Stock::all();
        
+        
         $inputs = $request->all();
 
-        
-        // dd($inputs["item"]);
+        $dainyu = $inputs["location"];
 
 
-
+        $judge=0;
         // ここに入れよう
 
         foreach($items as $item){
 
-            
-           
-            if(($item["item"] == $inputs["item"]) && ($item["location"] == $inputs["location"])){
+            if(($item["item"] == $inputs["item"]) && ($item["location"] == $dainyu)){
                 $item["cases"] = $item["cases"] + $inputs["cases"];
-                dd($item["cases"]);
-                $item->Update();
-            }else{
-             
-                Stock::create($inputs);
-            
+                $item->cases = $item["cases"];
+                $item->save(); 
+                $judge+=1;  
+                return redirect('/shipin');
             }
-      
+            
+        }
 
+        if($judge==0){
+            Stock::create($inputs);
         }
 
 
