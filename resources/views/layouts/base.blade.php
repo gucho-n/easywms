@@ -27,9 +27,21 @@
             <!-- <p>権限:{{$users->workers}}</p> -->
         </div>
         <div class=header-logout>
-            <p>ログアウト</p>
+
+        <a class="dropdown-item" href="{{ route('logout') }}"
+            onclick="event.preventDefault();
+            document.getElementById('logout-form').submit();">
+            {{ __('Logout') }}
+            </a>
+
+            <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                @csrf
+            </form>
         </div>
     </header>
+
+
+
 <!-- サイドメニュー書き込み -->
     <main>  
         <article> 
@@ -57,7 +69,7 @@
             </form> 
 
             <form action="" >
-                <button type="button"　name="入庫登録"　class="menu-container" onclick="location.href='./register'">ユーザー登録</button>
+                <button type="button"　name="入庫登録"　class="menu-container" onclick="location.href='/auth/register'">ユーザー登録</button>
             </form> 
 
         </article>

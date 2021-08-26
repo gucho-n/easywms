@@ -20,16 +20,15 @@
            
             <div class="transport-show-container-main"> 
             @foreach($choosestocks as $choosestock)        
-                <div class="transport-show-container-main-detail">
-                
-                    <p>{{$choosestock->stock->item}}</p>
-                </div>    
-                <div class="transport-show-container-main-detail">
-                <p>{{$choosestock->stock->cases}}</p>
-                </div>
-                <div class="transport-show-container-main-detail">
-                <p>{{$choosestock->stock->location}}</p>
-                </div>
+                    <div class="transport-show-container-main-detail">
+                        <p>{{$choosestock->stock->location}}</p>
+                    </div>    
+                    <div class="transport-show-container-main-detail">
+                        <p>{{$choosestock->stock->item}}</p>
+                    </div>
+                    <div class="transport-show-container-main-detail">
+                        <p>{{$choosestock->stock->cases}}</p>
+                     </div>
             @endforeach
             </div>
             
@@ -59,10 +58,10 @@
         <p class="transport-focus-title">移動先</p>
             
                 <form action="{{ route('transportdecide') }}" class="transport-form" method="post" enctype="multipart/form-data">
-                    <input type="text" class="transport-input" placeholder="ロケーション" name="tolocation">
+                    <input type="text" class="transport-input" placeholder="ロケーション" name="location">
                 
                 <div class="trasnport-form">
-                    <input type="text" class="transport-input" placeholder="ケース数" name="tocases">
+                    <input type="text" class="transport-input" placeholder="ケース数" name="cases">
                 </div>
 
                 <div class="transport-decide-btn">

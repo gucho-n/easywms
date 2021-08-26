@@ -7,27 +7,30 @@
     <div class="transport-main-container">   
         <div class="transport-show-container">
             <div class="transport-show-container-title">
+                <div class=transport-product-title> 
+                    <p>ロケーション</p>
+                </div> 
                 <div class=transport-product-title>
                     <p>製品名</p>
                 </div>
                 <div class=transport-product-title>
                     <p>ケース数</p>
                 </div> 
-                <div class=transport-product-title> 
-                    <p>ロケーション</p>
-                </div> 
+
             </div>
         @foreach($results as $result)
-            <div class="transport-show-container-main">         
+            <div class="transport-show-container-main"> 
                 <div class="transport-show-container-main-detail">
                     <p>{{$result->location}}</p>
-                </div>    
+                </div>          
+  
                 <div class="transport-show-container-main-detail">
                     <p>{{$result->item}}</p>
                 </div>
                 <div class="transport-show-container-main-detail">
                     <p>{{$result->cases}}</p>
                 </div>
+
             </div>
         @endforeach
         </div>

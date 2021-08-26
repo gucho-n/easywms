@@ -17,7 +17,7 @@ class TransportController extends Controller
         $users = auth()->user();
 
         return view ('transport', compact('results','users'));
-        return view ('shipin', ['items' => $items]);
+        
     }
     public function create(Request $request)
     {   
@@ -77,21 +77,38 @@ class TransportController extends Controller
             foreach($choosestocks as $choosestock){
            
          
-               $choosestock->Stock->cases = $choosestock->Stock->cases - $inputs["tocases"];
+               $choosestock->Stock->cases = $choosestock->Stock->cases - $inputs["cases"];
+               if($choosestock->Stock->cases==0){
+                    Stock::destroy($choosestock->Stock->id);
+               }
            
                $choosestock->Stock->Update();
                
-               if(($choosestock->Stock->location == $inputs["tolocation"])&&($choosestock->Stock->item == $inputs["tolocation"])){
+               if(($choosestock->Stock->location == $inputs["location"])&&($choosestock->Stock->item == $inputs["location"])){
                 
                 $choosestock->Stock->cases = $choosestock->Stock->cases + $nowstock["cases"];
                 
                 $choosestock->Stock->cases->Update();
-                Transport::query()->delete();
-                
-               }
 
-            
+
+
+
+               
+               }else{
+
+                $inputs = array_merge($inputs,array('item'=>$choosestock["chooseitem"],'inport_from'=>"不明",'other'=>"不明"));
+                
+                Stock::create($inputs);
+
+              
+              
+               
             }
+
+            Transport::destroy($choosestock["id"]);
+            }
+            
+           
             return redirect('/transport');
 
             

@@ -1,0 +1,40 @@
+
+.card{
+
+    background-color: rgb(207, 207, 231);
+    height: 40vh;
+    width: 40%;
+    margin: 0 auto;
+    padding: 2%;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.25);
+  
+}
+/* 一旦非表示 */
+.navbar-brand{
+    visibility: hidden;
+}
+
+.form-control{
+    width: 90%;
+    font-size: 20px;
+}
+.navbar-toggler{
+    visibility: hidden;
+}
+.nav-item{
+    visibility: hidden;
+}
+.btn-link{
+    visibility: hidden;
+}
+.btn-primary{
+    float :right;
+    width: 20%;
+}
+.col-md-6{
+    margin-top: 2%;
+}
+.card-header{
+    font-family:fantasy;
+    font-size: 32px;
+}
