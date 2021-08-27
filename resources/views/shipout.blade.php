@@ -7,6 +7,11 @@
     <div class="shipout-main-section">
         <div class="shipout-input-section">
             <div class="shipout-main-containts">
+                @if($errors->any())
+                    @foreach($errors->all() as $error)
+                    <p class="error-msg">{{$error}} </p> 
+                    @endforeach
+                @endif
                 <form  action="{{ route('shipoutStore') }}" method="post">
                         <p class=shipout-input-name>行き先</p>                    
                         <div class="shipout-form-container">

@@ -26,6 +26,11 @@ class ShipoutController extends Controller
 
     public function create(Request $request)
     {   
+
+        $request->validate(['item'=>'required']);
+        $request->validate(['cases'=>'required']);
+        $request->validate(['location'=>'required']);
+        //ルール
         
         $inputs = $request->all();
       

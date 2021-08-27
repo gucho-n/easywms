@@ -19,6 +19,7 @@
     <!-- Styles -->
     <!-- <link href="{{ asset('css/app.css') }}" rel="stylesheet"> -->
     <link href="{{ asset('css/login.css') }}" rel="stylesheet">
+    <link rel="stylesheet" href="{{ asset('css/response/login.css') }}" media="screen and (max-width:480px)">
 
 </head>
 <body>

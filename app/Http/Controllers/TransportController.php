@@ -20,7 +20,16 @@ class TransportController extends Controller
         
     }
     public function create(Request $request)
-    {   
+    { 
+        
+        $request->validate(['item'=>'required']);
+        $request->validate(['cases'=>'required']);
+        $request->validate(['location'=>'required']);
+        $request->validate(['customer'=>'required']);
+
+        
+        //ルール
+        
         //モデル→変数→ビューへ
 
        
@@ -62,6 +71,11 @@ class TransportController extends Controller
 
         public function update(Request $request)
         {
+            $request->validate(['item'=>'required']);
+            $request->validate(['cases'=>'required']);
+            $request->validate(['location'=>'required']);
+            $request->validate(['customer'=>'required']);
+            
             $users = auth()->user();
             // 対象の在庫から、入力した数量の差を求めて、モデルに渡す, 最後にアップデート
             //入力した値
@@ -84,26 +98,20 @@ class TransportController extends Controller
            
                $choosestock->Stock->Update();
                
-               if(($choosestock->Stock->location == $inputs["location"])&&($choosestock->Stock->item == $inputs["location"])){
+               if(($choosestock->Stock->location == $inputs["location"])&&($choosestock->Stock->item == $inputs["item"])){
                 
                 $choosestock->Stock->cases = $choosestock->Stock->cases + $nowstock["cases"];
                 
                 $choosestock->Stock->cases->Update();
-
-
-
-
-               
+            
                }else{
 
                 $inputs = array_merge($inputs,array('item'=>$choosestock["chooseitem"],'inport_from'=>"不明",'other'=>"不明"));
                 
-                Stock::create($inputs);
-
-              
-              
+                Stock::create($inputs);         
                
             }
+
 
             Transport::destroy($choosestock["id"]);
             }

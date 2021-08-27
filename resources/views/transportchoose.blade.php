@@ -35,8 +35,11 @@
   
         </div>
 
-
-
+        @if($errors->any())
+                @foreach($errors->all() as $error)
+                <p class="error-msg">{{$error}} </p> 
+                @endforeach
+            @endif
 
 
         <p class="transport-focus-title">絞り込み</p>

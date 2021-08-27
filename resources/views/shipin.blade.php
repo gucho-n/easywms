@@ -5,7 +5,15 @@
         <p class="shipin-title">入庫登録</p>
     </div>
     <div class="shipin-main-section">
-        <div class="shipin-main-containts">          
+        <div class="shipin-main-containts"> 
+            @if($errors->any())
+                @foreach($errors->all() as $error)
+                <p class="error-msg">{{$error}} </p> 
+                @endforeach
+            @endif
+
+              
+
                 <form action="{{ route('store') }}" method="post">
                     
                     <div class="shipin-form-container">
@@ -44,10 +52,10 @@
         </div>        
     </div>
 </div>
-@foreach($items as $item)
 
-@endforeach
     
 
 
 @endsection
+
+

@@ -7,6 +7,8 @@ use App\Models\Stock;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Validator; // Validatorだけでも実行できる
+
 
 class ShipInController extends Controller
 {
@@ -15,6 +17,20 @@ class ShipInController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
     //requestを入力
     public function index(Request $request)
     {   
@@ -39,6 +55,13 @@ class ShipInController extends Controller
      */
     public function create(Request $request)
     {   
+
+        $request->validate(['item'=>'required']);
+        $request->validate(['cases'=>'required']);
+        $request->validate(['location'=>'required']);
+        //ルール
+        
+      
         $items = Stock::all();
        
         

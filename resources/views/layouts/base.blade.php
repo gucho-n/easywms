@@ -12,6 +12,9 @@
         <link rel="stylesheet" href="{{ asset('css/list.css') }}">
         <link rel="stylesheet" href="{{ asset('css/transport.css') }}">
         <link rel="stylesheet" href="{{ asset('css/location.css') }}">
+        <link rel="stylesheet" href="{{ asset('css/response/base.css') }}" media="screen and (max-width:480px)">
+
+
         
         
         <title>aaa</title>
@@ -20,7 +23,7 @@
     <header>
         <div class="header-name">
             <nav class="login-username">
-              <p>ようこそ！{{$users->name}}さん</p>
+              <p class="welcome">ようこそ！{{$users->name}}さん</p>
             </nav>
         </div>
         <div class=header-auth>

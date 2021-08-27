@@ -18,6 +18,12 @@
                 </div> 
 
             </div>
+            @if($errors->any())
+                @foreach($errors->all() as $error)
+                <p class="error-msg">{{$error}} </p> 
+                @endforeach
+            @endif
+            
         @foreach($results as $result)
             <div class="transport-show-container-main"> 
                 <div class="transport-show-container-main-detail">
