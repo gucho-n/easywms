@@ -5,6 +5,8 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Shipout;
 use Illuminate\Support\Facades\Auth; //追加
+
+use Validator; // Validatorだけでも実行できる
 class ShipoutController extends Controller
 {
     public function index(Request $request)
@@ -48,6 +50,8 @@ class ShipoutController extends Controller
      
         return redirect('/shipout');
     }
+
+    
     //データを渡して保存
     public function update(Request $request)
     {   

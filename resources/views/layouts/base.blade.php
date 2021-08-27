@@ -72,12 +72,18 @@
             </form> 
 
             <form action="" >
-                <button type="button"　name="入庫登録"　class="menu-container" onclick="location.href='/auth/register'">ユーザー登録</button>
+                <button type="button"　name="入庫登録"　class="menu-container" onclick="location" href="{{ route('register') }}">ユーザー登録</button>
             </form> 
 
         </article>
         @yield('content')
     </main>
+
+    <!-- @if (Route::has('register'))
+                                <li class="nav-item">
+                                    <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                                </li>
+                            @endif -->
         
     
         

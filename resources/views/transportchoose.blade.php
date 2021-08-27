@@ -35,11 +35,11 @@
   
         </div>
 
-        @if($errors->any())
+        <!-- @if($errors->any())
                 @foreach($errors->all() as $error)
                 <p class="error-msg">{{$error}} </p> 
                 @endforeach
-            @endif
+            @endif -->
 
 
         <p class="transport-focus-title">絞り込み</p>
@@ -60,7 +60,7 @@
 
         <p class="transport-focus-title">移動先</p>
             
-                <form action="{{ route('transportdecide') }}" class="transport-form" method="post" enctype="multipart/form-data">
+                <form action="{{ route('transportdecide') }}" class="transport-form" method="post">
                     <input type="text" class="transport-input" placeholder="ロケーション" name="location">
                 
                 <div class="trasnport-form">

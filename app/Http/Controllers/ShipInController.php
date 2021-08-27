@@ -21,16 +21,6 @@ class ShipInController extends Controller
 
 
 
-
-
-
-
-
-
-
-
-
-
     //requestを入力
     public function index(Request $request)
     {   
@@ -90,25 +80,7 @@ class ShipInController extends Controller
         }
 
 
-
-        // これは一旦置いとく
-        // foreach($items as $item){
-        //     if ($item->item == $inputs->item && $item->location == $inputs->location){
-        //         \DB::table('stock')
-        //             ->where('id', $item)
-        //             ->update([
-        //             'cases' => ($item->cases)+($inputs->cases)
-        //          ]);
-        //     }else{
-        //             // if($inputs['item']==)
-        //         Stock::create($inputs);
-        //     }
-        // }
-
-    
-     
-
-        \Session::flash('err_meg','入庫完了');
+        // \Session::flash('err_meg','入庫完了');
         return redirect('/shipin');
 
     }

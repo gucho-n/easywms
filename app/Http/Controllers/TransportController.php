@@ -21,11 +21,10 @@ class TransportController extends Controller
     }
     public function create(Request $request)
     { 
-        
-        $request->validate(['item'=>'required']);
-        $request->validate(['cases'=>'required']);
-        $request->validate(['location'=>'required']);
-        $request->validate(['customer'=>'required']);
+ 
+        $request->validate(['chooselocation'=>'required']);
+        $request->validate(['chooseitem'=>'required']);
+
 
         
         //ルール
@@ -38,6 +37,8 @@ class TransportController extends Controller
         $nowstocks = Stock::all();
     
         $inputs = $request->all();
+
+        $judge=0;
       
         foreach($nowstocks as $nowstock){ 
           
@@ -51,19 +52,13 @@ class TransportController extends Controller
 
 
             return view ('/transportchoose', compact('choosestocks','users'));        
-        }else{
-            // return redirect('/transport');
         }
-                  // if (($choosestock["chooselocation"]==$nowstock["location"])&&()){
-                //     dd($nowstock["id"]);
-                //     Transport::create($nowstock["id"]);
-                //     return view ('transportchoose', compact('nowstock','users'));
-                  
-                // }else{
-                //     print("失敗");
-                // }
-             
-            
+                
+        }
+         if($judge=0){
+      
+         return redirect('/shipin');
+
         }
 
 
@@ -71,53 +66,79 @@ class TransportController extends Controller
 
         public function update(Request $request)
         {
-            $request->validate(['item'=>'required']);
-            $request->validate(['cases'=>'required']);
-            $request->validate(['location'=>'required']);
-            $request->validate(['customer'=>'required']);
+            
+            // バリデーションが
+            // $request->validate(['item'=>'required']);
+            // $request->validate(['cases'=>'required']);
+            // $request->validate(['location'=>'required']);
+            // $request->validate(['customer'=>'required']);
             
             $users = auth()->user();
             // 対象の在庫から、入力した数量の差を求めて、モデルに渡す, 最後にアップデート
             //入力した値
             $inputs = $request->all();
 
+            $inputcases=$inputs['cases'];
+            $inputlocation=$inputs['location'];
+        
+
             $nowstocks = Stock::all();
-            
-            //上で選択した値
             $choosestocks = Transport::all();
 
-            
-                
+            $sum=0;
+
+            $judge=0;
+
+            $item="";
+
             foreach($choosestocks as $choosestock){
-           
-         
-               $choosestock->Stock->cases = $choosestock->Stock->cases - $inputs["cases"];
-               if($choosestock->Stock->cases==0){
-                    Stock::destroy($choosestock->Stock->id);
-               }
-           
-               $choosestock->Stock->Update();
-               
-               if(($choosestock->Stock->location == $inputs["location"])&&($choosestock->Stock->item == $inputs["item"])){
-                
-                $choosestock->Stock->cases = $choosestock->Stock->cases + $nowstock["cases"];
-                
-                $choosestock->Stock->cases->Update();
             
-               }else{
+            $item=$choosestock["chooseitem"];
 
-                $inputs = array_merge($inputs,array('item'=>$choosestock["chooseitem"],'inport_from'=>"不明",'other'=>"不明"));
+            $sum=$choosestock->Stock->cases-$inputcases;
                 
-                Stock::create($inputs);         
+            $choosestock->Stock->cases=$sum;
+
+            $choosestock->Stock->Update(); 
+           
+
+
+            foreach($nowstocks as $nowstock){
+
+
+                if(($choosestock->chooseitem==$nowstock['item'])&&($inputlocation==$nowstock['location'])){
+
+                    $nowstock['cases']+= $inputcases;
+                  
+                    $nowstock->Update();
+                    $judge=1;
+                    break;
+                }
+
                
             }
 
+    
+            $inputs = array_merge($inputs,array('item'=>$item,'inport_from'=>'不明','other'=>'不明'));
+                if($judge==0){
+                    Stock::create($inputs);
+                }
 
-            Transport::destroy($choosestock["id"]);
+                    Transport::destroy($choosestock["id"]);
+
+
+                foreach($nowstocks as $nowstock){
+                    if($nowstock['cases']==0){
+
+                    Stock::destroy($nowstock["id"]);
+                    }
+                }
+
+                return redirect('/transport');
+
             }
-            
            
-            return redirect('/transport');
+            
 
             
 

@@ -37,6 +37,7 @@ Route::post('/locationResister', 'App\Http\Controllers\LocationController@create
 
 Route::post('/transportchoose', 'App\Http\Controllers\TransportController@create')->name('transportchoose');
 
+
 Route::post('transportdecide', 'App\Http\Controllers\TransportController@update')->name('transportdecide');
 
 
@@ -46,6 +47,3 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
-// Auth::routes();
-
-// Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
