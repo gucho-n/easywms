@@ -14,6 +14,8 @@
         <link rel="stylesheet" href="{{ asset('css/location.css') }}">
         <link rel="stylesheet" href="{{ asset('css/response/base.css') }}" media="screen and (max-width:480px)">
 
+        <link rel="stylesheet" href="{{ asset('css/shipoutconfirm.css') }}">
+
 
         
         
@@ -72,8 +74,10 @@
             </form> 
 
             <form action="" >
-                <button type="button"　name="入庫登録"　class="menu-container" onclick="location" href="{{ route('register') }}">ユーザー登録</button>
+                <button type="button"　name="入庫登録"　class="menu-container" onclick="location.href='./register'">ユーザー登録</button>
             </form> 
+
+           
 
         </article>
         @yield('content')

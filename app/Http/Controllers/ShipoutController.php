@@ -35,6 +35,8 @@ class ShipoutController extends Controller
         //ルール
         
         $inputs = $request->all();
+
+
       
         if($inputs['customer']==null || $inputs['item']==null || $inputs['cases']==null || $inputs['location']==null){
             return redirect('/shipout')->with('flash_message', '入力フォームを入れてください');
@@ -53,14 +55,18 @@ class ShipoutController extends Controller
 
     
     //データを渡して保存
-    public function update(Request $request)
+    public function show(Request $request)
     {   
-        $inputs = $request->all();
+        $shipouts = Shipout::find($request->id);
+        $users = auth()->user();
+
+        return view ('shipoutconfirm', compact('shipouts','users'));
+      ;
         Shipout::create($inputs);
         
     
         \Session::flash('err_meg','');
-        return redirect('/shipout');
+        
     }
 
     

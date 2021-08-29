@@ -39,6 +39,7 @@ class RegisterController extends Controller
     public function __construct()
     {
         $this->middleware('guest');
+        // 元は$this->middleware('guest');
     }
 
     /**
@@ -62,7 +63,22 @@ class RegisterController extends Controller
      * @param  array  $data
      * @return \App\Models\User
      */
-    protected function create(array $data)
+    
+    public function index(Request $request){
+        //モデル→変数→ビューへ
+        // $results = ResultList::all();
+        
+        // $users = auth()->user();
+        $users = auth()->user();
+        return view ('auth.register');
+    }
+    
+    
+    
+    
+    
+    
+     protected function create(array $data)
     {
         return User::create([
             'name' => $data['name'],

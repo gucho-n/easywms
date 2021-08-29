@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Models\ResultList;
 
 use Illuminate\Support\Facades\Auth;
+use Validator; // Validatorだけでも実行できる
 
 class ListController extends Controller
 

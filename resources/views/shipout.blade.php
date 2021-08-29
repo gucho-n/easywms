@@ -41,11 +41,13 @@
             <p class="shipout-hikiate-title">引当準備一覧</p>     
         
             <ol class="shipout-result-container">
+            <form action="/shipout/confirm" method=”POST”>
             @foreach($results as $result)
-                <li class="shipout-each-result"><a href="" >{{$result -> customer}}</a></li>
+                <li class="shipout-each-result"><a href="{{ route('shipoutconfirm', ['id' => $result->id]) }}"　method=”POST”>{{$result -> customer}}</a></li>
                 
             @endforeach       
             </ol>
+            </form>
        
             </div>   
 
