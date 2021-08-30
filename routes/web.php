@@ -44,7 +44,7 @@ Route::get('/shipout','App\Http\Controllers\ShipoutController@index')->name('shi
 
 Route::post('shipoutStore', 'App\Http\Controllers\ShipoutController@create')->name('shipoutStore');
 
-Route::post('shipoutconfirm', 'App\Http\Controllers\ShipoutController@show')->name('shipoutconfirm');
+Route::match(array('GET', 'POST'),'shipout/confirm/{id}', 'App\Http\Controllers\ShipoutController@show')->name('shipoutconfirm');
 
 // Route::get('/shipout/{id}', 'App\Http\Controllers\ListController@update')->name('list');
 

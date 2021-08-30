@@ -49,9 +49,10 @@ class ShipoutController extends Controller
             $users = auth()->user();
 
             $shipouts = Shipout::find($request->id);
-            dd($id);
+
+
             
-            return view ('shipoutconfirm', compact('users'));
+            return view ('shipoutconfirm', compact('users','shipouts'));
         }
 
     

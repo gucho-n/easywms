@@ -1,11 +1,6 @@
-@foreach($shipoutconfirms as $shipoutconfirm)        
+@foreach($shipouts as $shipout)        
                     <div class="transport-show-container-main-detail">
-                        <p>{{$shipoutconfirms->shipoutconfirm}}</p>
+                        <p>{{$shipout}}</p>
                     </div>    
-                    <div class="transport-show-container-main-detail">
-                        <p>{{$shipoutconfirms->shipoutconfirm}}</p>
-                    </div>
-                    <div class="transport-show-container-main-detail">
-                        <p>{{$shipoutconfirms->shipoutconfirm}}</p>
-                     </div>
+
 @endforeach
