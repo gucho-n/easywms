@@ -17,19 +17,17 @@ Route::get('/', function () {
     return view('auth/login');
 });
 
+// shipin
 Route::get('/shipin','App\Http\Controllers\ShipInController@index')->name('shipin'); 
 
 Route::post('store', 'App\Http\Controllers\ShipInController@create')->name('store');
 
-Route::get('/shipout','App\Http\Controllers\ShipoutController@index')->name('shipout'); 
 
-Route::post('shipoutStore', 'App\Http\Controllers\ShipoutController@create')->name('shipoutStore');
-
+// transport
 Route::get('transport', 'App\Http\Controllers\TransportController@index')->name('transport');
 
 Route::get('list', 'App\Http\Controllers\ListController@index')->name('list');
 
-Route::get('/shipout/{id}', 'App\Http\Controllers\ListController@update')->name('list');
 
 Route::get('/location','App\Http\Controllers\LocationController@index')->name('location');
 
@@ -40,6 +38,15 @@ Route::post('/transportchoose', 'App\Http\Controllers\TransportController@create
 
 Route::post('transportdecide', 'App\Http\Controllers\TransportController@update')->name('transportdecide');
 
+
+
+Route::get('/shipout','App\Http\Controllers\ShipoutController@index')->name('shipout'); 
+
+Route::post('shipoutStore', 'App\Http\Controllers\ShipoutController@create')->name('shipoutStore');
+
+Route::post('/shipout/show', 'App\Http\Controllers\ListController@show')->name('shipoutConfirm');
+
+// Route::get('/shipout/{id}', 'App\Http\Controllers\ListController@update')->name('list');
 
 
 

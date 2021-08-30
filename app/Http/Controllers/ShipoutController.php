@@ -11,18 +11,13 @@ class ShipoutController extends Controller
 {
     public function index(Request $request)
     {   
-
         //モデル→変数→ビューへ
         $results = Shipout::all();
         
         $users = auth()->user();
        
-
-   
         return view ('shipout', compact('results','users'));
        
-        
-
         // return view ('shipin', ['items' => $items]);
     }
 
@@ -44,12 +39,17 @@ class ShipoutController extends Controller
         }else{
             Shipout::create($inputs);
         };
-       
-        
-    
-     
+  
         return redirect('/shipout');
     }
+
+        //データを渡して保存
+        public function show(Request $request,$id)
+        {   
+            $results = Shipout::find($id);
+            
+            return view ('shipoutconfirm', compact('results','users'));
+        }
 
     
     //データを渡して保存
