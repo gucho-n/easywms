@@ -8,4 +8,4 @@
                     <div class="transport-show-container-main-detail">
                         <p>{{$shipoutconfirms->shipoutconfirm}}</p>
                      </div>
-            @endforeach
+@endforeach
