@@ -16,6 +16,8 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('auth/login');
 });
+// 登録画面
+Route::get('/auth/register','App\Http\Controllers\AdminRegisterController@index')->name('register');
 
 // shipin
 Route::get('/shipin','App\Http\Controllers\ShipInController@index')->name('shipin'); 

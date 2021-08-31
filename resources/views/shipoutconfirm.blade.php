@@ -1,6 +1,7 @@
-@foreach($shipouts as $shipout)        
                     <div class="transport-show-container-main-detail">
-                        <p>{{$shipout}}</p>
-                    </div>    
+                        <p>dd($shipouts["location"]);</p>
+                    </div>  
+                    
+                    <input type= "hidden" name="shipout_id" value="{{$shipout->id}}"/>
+                    
 
-@endforeach

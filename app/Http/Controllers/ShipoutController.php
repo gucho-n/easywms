@@ -44,22 +44,26 @@ class ShipoutController extends Controller
     }
 
         //データを渡して保存
-        public function show(Request $request,$id)
+        public function show(Request $request)
         {   
-            $users = auth()->user();
-
-            $shipouts = Shipout::find($request->id);
-
-
+            $shipout = Shipout::find($request->id);
+      
+            $user = auth()->user();
+    
+            return view ('shipoutconfirm', compact('shipout','user'));
+          
+            // Shipout::create($inputs);
             
-            return view ('shipoutconfirm', compact('users','shipouts'));
+        
+            
         }
 
     
     //データを渡して保存
     public function update(Request $request)
     {   
-        $inputs = $request->all();
+        $shipouts = Shipout::find($request->shipout_id);
+        
         Shipout::create($inputs);
         
     

@@ -72,7 +72,7 @@
             </form> 
 
             <form action="" >
-                <button type="button"　name="入庫登録"　class="menu-container" onclick="location" href="{{ route('register') }}">ユーザー登録</button>
+                <button type="button"　name="入庫登録"　class="menu-container" onclick="location.href='/auth/register'">ユーザー登録</button>
             </form> 
 
         </article>
