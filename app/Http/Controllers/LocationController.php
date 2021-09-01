@@ -14,8 +14,8 @@ class LocationController extends Controller
 
         //モデル→変数→ビューへ
         $results = Location::all();
-        $users = auth()->user();
-        return view ('location', compact('results','users'));
+        $user = auth()->user();
+        return view ('location', compact('results','user'));
        
     }
 

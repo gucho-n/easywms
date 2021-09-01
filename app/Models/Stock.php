@@ -28,6 +28,11 @@ class Stock extends Model
         return $this->hasOne('App\Models\Transport');
     }
 
+    public function shipout()
+    {
+      return $this->belongsToMany('App\Models\Shipout');
+    }
+
 
 
 

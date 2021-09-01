@@ -12,9 +12,9 @@ class AdminRegisterController extends Controller
         //モデル→変数→ビューへ
         // $results = Shipout::all();
         
-        $users = auth()->user();
+        $user = auth()->user();
        
-        return view ('auth/register', compact('users'));
+        return view ('auth/register', compact('user'));
        
         // return view ('shipin', ['items' => $items]);
     }

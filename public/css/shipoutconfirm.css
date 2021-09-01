@@ -1,0 +1,25 @@
+.shipout-confirm-container{
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.25);
+    width: 60%;
+    margin: 2% auto;
+    
+}
+.shipout-confirm-title{
+    text-align: center;
+    margin-top: 2%;
+    font-size: 32px;
+}
+
+.shipout-confirm-title{
+    text-align: center;
+    margin-top: 2%;
+    font-size: 32px;
+}
+.shipout-confirm-main-container{
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.25);
+
+    margin: 2% auto;
+    width: 80%;
+    height: 80%;
+
+}

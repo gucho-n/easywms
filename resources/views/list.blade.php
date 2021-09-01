@@ -2,11 +2,12 @@
 @section('content')
 <div class="list-container">
     <div class="list-main-container">
+    <p class="list-title">ピッキングリスト</p>
         @foreach($results as $result)
         <div class="list-main-containts">
-        <div class="list-title-container">
-            <p class="list-title">ピッキングリスト</p>
-        </div>
+            <div class="list-title-container">
+                
+            </div>
         
             <p class="list-heading">得意先</p>
             <div class="list-each-category-container">
@@ -37,7 +38,7 @@
                 <form action="入力" class="shipin-form"><input type="button" class="list-input" value="送信"></form><p>
             </div>
 
-        @endforeach
+            @endforeach
 
         </div>
     </div>

@@ -14,9 +14,9 @@ class TransportController extends Controller
 
         //モデル→変数→ビューへ
         $results = Stock::all();
-        $users = auth()->user();
+        $user = auth()->user();
 
-        return view ('transport', compact('results','users'));
+        return view ('transport', compact('results','user'));
         
     }
     public function create(Request $request)
@@ -32,7 +32,7 @@ class TransportController extends Controller
         //モデル→変数→ビューへ
 
        
-        $users = auth()->user();
+        $user = auth()->user();
        
         $nowstocks = Stock::all();
     
@@ -51,7 +51,7 @@ class TransportController extends Controller
             $choosestocks = Transport::all();
 
 
-            return view ('/transportchoose', compact('choosestocks','users'));        
+            return view ('/transportchoose', compact('choosestocks','user'));        
         }
                 
         }
@@ -73,7 +73,7 @@ class TransportController extends Controller
             // $request->validate(['location'=>'required']);
             // $request->validate(['customer'=>'required']);
             
-            $users = auth()->user();
+            $user = auth()->user();
             // 対象の在庫から、入力した数量の差を求めて、モデルに渡す, 最後にアップデート
             //入力した値
             $inputs = $request->all();

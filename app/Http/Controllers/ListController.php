@@ -15,8 +15,8 @@ class ListController extends Controller
         //モデル→変数→ビューへ
         $results = ResultList::all();
         
-        $users = auth()->user();
+        $user = auth()->user();
 
-        return view ('list', compact('results','users'));
+        return view ('list', compact('results','user'));
     }
 }

@@ -12,6 +12,7 @@
         <link rel="stylesheet" href="{{ asset('css/list.css') }}">
         <link rel="stylesheet" href="{{ asset('css/transport.css') }}">
         <link rel="stylesheet" href="{{ asset('css/location.css') }}">
+        <link rel="stylesheet" href="{{ asset('css/shipoutconfirm.css') }}">
         <link rel="stylesheet" href="{{ asset('css/response/base.css') }}" media="screen and (max-width:480px)">
 
 
@@ -23,11 +24,11 @@
     <header>
         <div class="header-name">
             <nav class="login-username">
-              <p class="welcome">ようこそ！{{$users->name}}さん</p>
+              <p class="welcome">ようこそ！{{$user->name}}さん</p>
             </nav>
         </div>
         <div class=header-auth>
-            <!-- <p>権限:{{$users->workers}}</p> -->
+            <!-- <p>権限:{{$user->workers}}</p> -->
         </div>
         <div class=header-logout>
 

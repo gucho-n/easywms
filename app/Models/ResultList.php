@@ -8,4 +8,6 @@ use Illuminate\Database\Eloquent\Model;
 class ResultList extends Model
 {
     use HasFactory;
+
+    protected $fillable = ['shipto', 'cases','items','locationfrom'];
 }

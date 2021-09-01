@@ -8,6 +8,13 @@ use Illuminate\Database\Eloquent\Model;
 class Shipout extends Model
 {
     use HasFactory;
-    protected $fillable = ['customer', 'item','cases','location'];
+    protected $fillable = ['customer', 'items','cases','location'];
+
+
+    public function stock()
+    {
+      return $this->belongsToMany('App\Models\Stock');
+    }
 
 }
+

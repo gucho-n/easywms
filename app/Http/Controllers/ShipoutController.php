@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Shipout;
+use App\Models\Stock;
+use App\Models\Resultlist;
 use Illuminate\Support\Facades\Auth; //追加
 
 use Validator; // Validatorだけでも実行できる
@@ -14,9 +16,9 @@ class ShipoutController extends Controller
         //モデル→変数→ビューへ
         $results = Shipout::all();
         
-        $users = auth()->user();
+        $user = auth()->user();
        
-        return view ('shipout', compact('results','users'));
+        return view ('shipout', compact('results','user'));
        
         // return view ('shipin', ['items' => $items]);
     }
@@ -46,13 +48,13 @@ class ShipoutController extends Controller
         //データを渡して保存
         public function show(Request $request)
         {   
+            $request->all();
             $shipout = Shipout::find($request->id);
-      
+            
             $user = auth()->user();
     
-            return view ('shipoutconfirm', compact('shipout','user'));
-          
-            // Shipout::create($inputs);
+            return view ('shipoutconfirm', compact('shipout','user','request'));
+        
             
         
             
@@ -62,13 +64,42 @@ class ShipoutController extends Controller
     //データを渡して保存
     public function update(Request $request)
     {   
-        $shipouts = Shipout::find($request->shipout_id);
-        
-        Shipout::create($inputs);
-        
-    
-        \Session::flash('err_meg','');
-        return redirect('/shipout');
+            $shipout = Shipout::find($request->shipout_id);
+
+            $shipoutcases = $shipout["cases"];
+
+            $stocks = Stock::all();
+      
+
+        foreach($stocks as $stock){
+
+            if ($stock["item"] == $shipout["item"]){
+                if($stock["cases"] - $shipoutcases>=0){
+                $stock["cases"] = $stock["cases"] - $shipoutcases;
+                $stock->Update();
+
+                
+                $inputs=array('cases'=>$shipoutcases,'locationfrom'=>$stock["location"],'shipto'=>$shipout["customer"],'items'=>$shipout["item"]);
+
+
+                ResultList::create($inputs);
+                //ここからは0cs以下だったときの処理を書くこと
+
+                break;
+                }elseif($stock["cases"]-$shipoutcases<0){
+                    $shipoutcases = $shipoutcases - $stock["cases"]; 
+                    $inputs=array('cases'=>$shipoutcases,'locationfrom'=>$stock["location"],'shipto'=>$shipout["customer"],'items'=>$shipout["item"]);
+                    ResultList::create($inputs);
+
+                    $stock["cases"] = 0;
+                    $stock->Update();
+                }
+
+            }
+       
+       
+        }
+
     }
 
     

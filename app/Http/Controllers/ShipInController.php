@@ -28,10 +28,10 @@ class ShipInController extends Controller
         //モデル→変数→ビューへ
         $items = Stock::all();
 
-        $users = auth()->user();
+        $user = auth()->user();
         
     
-        return view ('shipin', compact('items','users'));
+        return view ('shipin', compact('items','user'));
         
 
         // return view ('shipin', ['items' => $items]);
