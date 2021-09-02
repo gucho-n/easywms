@@ -151,6 +151,6 @@ return [
     |
     */
 
-    'attributes' => ['cases'=>'ケース数','item'=>'製品名','location'=>'ロケーション','inport_from'=>'入庫元','other'=>'備考'],
+    'attributes' => ['cases'=>'ケース数','item'=>'製品名','location'=>'ロケーション','inport_from'=>'入庫元','other'=>'備考','chooseitem'=>'製品名'],
 
 ];

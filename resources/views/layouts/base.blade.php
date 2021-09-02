@@ -15,6 +15,9 @@
         <link rel="stylesheet" href="{{ asset('css/shipoutconfirm.css') }}">
         <link rel="stylesheet" href="{{ asset('css/response/base.css') }}" media="screen and (max-width:480px)">
 
+        <!-- Scripts -->
+        <script src="{{ asset('js/addfunc.js') }}" defer></script>
+
 
         
         

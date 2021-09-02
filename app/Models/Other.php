@@ -9,7 +9,7 @@ class Other extends Model
 {
     use HasFactory;   
  
- 
+    
     public function stock()
 {
     return $this->hasMany('App\Models\Stock');

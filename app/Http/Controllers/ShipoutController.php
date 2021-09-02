@@ -41,8 +41,8 @@ class ShipoutController extends Controller
         }else{
             Shipout::create($inputs);
         };
-  
-        // return redirect('/shipout');
+        
+        return redirect('/shipout');
     }
 
         //データを渡して保存

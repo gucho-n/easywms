@@ -50,9 +50,10 @@ Route::match(array('GET', 'POST'),'shipout/confirm/{id}', 'App\Http\Controllers\
 
 Route::post('shipoutdeside', 'App\Http\Controllers\ShipoutController@update')->name('shipoutDeside');
 
+
+
 Route::get('list', 'App\Http\Controllers\ListController@index')->name('list');
 
-// Route::get('/shipout/{id}', 'App\Http\Controllers\ListController@update')->name('list');
 
 
 

@@ -26,6 +26,8 @@ class TransportController extends Controller
         $request->validate(['chooseitem'=>'required']);
 
 
+
+
         
         //ルール
         

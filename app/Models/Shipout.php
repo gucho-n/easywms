@@ -8,7 +8,7 @@ use Illuminate\Database\Eloquent\Model;
 class Shipout extends Model
 {
     use HasFactory;
-    protected $fillable = ['customer', 'items','cases','location'];
+    protected $fillable = ['customer', 'item','cases','location'];
 
 
     public function stock()

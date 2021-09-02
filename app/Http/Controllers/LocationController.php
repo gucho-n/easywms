@@ -19,6 +19,16 @@ class LocationController extends Controller
        
     }
 
+    public function create(Request $request)
+    {   
+         //モデル→変数→ビューへ
+        $inputs=$request->all();
+        Location::create($inputs);
+        $user = auth()->user();
+        return view ('location', compact('user'));
+       
+    }
+
 
 
 

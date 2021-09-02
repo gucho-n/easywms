@@ -5,13 +5,14 @@
         <p class="location-title">ロケーション登録</p>
     </div>
     <div class="location-main-container">
-    <form action="入力" class="location-form">
+    <form action="{{ route('locationResister') }}" class="location-form" method="POST">
+        @csrf
             <p>ロケーション番号</p>               
-                    <input type="text" class="location-input" placeholder="例）1-1-1">
+                    <input type="text" class="location-input" name="location" placeholder="例）1-1-1">
 
             <p>備考</p>
             
-                    <input type="text" class="location-input" placeholder="狭い">
+                    <input type="text" class="location-input" name="other" placeholder="狭い">
         
     
             <div class="location-submit-container">
