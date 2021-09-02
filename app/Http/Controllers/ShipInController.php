@@ -18,19 +18,14 @@ class ShipInController extends Controller
      * @return \Illuminate\Http\Response
      */
 
-
-
-
     //requestを入力
     public function index(Request $request)
     {   
-
         //モデル→変数→ビューへ
         $items = Stock::all();
 
         $user = auth()->user();
-        
-    
+           
         return view ('shipin', compact('items','user'));
         
 
@@ -45,6 +40,10 @@ class ShipInController extends Controller
      */
     public function create(Request $request)
     {   
+        $request->old('item');
+        $request->old('cases');
+        $request->old('location');
+        
 
         $request->validate(['item'=>'required']);
         $request->validate(['cases'=>'required']);
