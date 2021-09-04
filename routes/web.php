@@ -53,6 +53,7 @@ Route::post('shipoutdeside', 'App\Http\Controllers\ShipoutController@update')->n
 
 
 Route::get('list', 'App\Http\Controllers\ListController@index')->name('list');
+Route::get('listdelete', 'App\Http\Controllers\ListController@delete')->name('listdelete');
 
 
 

@@ -50,7 +50,6 @@ class ShipoutController extends Controller
         {   
             $request->all();
             $shipout = Shipout::find($request->id);
-            
             $user = auth()->user();
     
             return view ('shipoutconfirm', compact('shipout','user','request'));
@@ -96,7 +95,8 @@ class ShipoutController extends Controller
                 }
 
             }
-       
+            
+            return redirect('/shipout');
        
         }
 

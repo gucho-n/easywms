@@ -25,6 +25,7 @@
             @endif
             
         @foreach($results as $result)
+      
             <div class="transport-show-container-main"> 
                 <div class="transport-show-container-main-detail">
                     <p>{{$result->location}}</p>
@@ -38,6 +39,7 @@
                 </div>
 
             </div>
+        
         @endforeach
         </div>
 

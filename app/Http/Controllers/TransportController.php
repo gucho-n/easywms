@@ -85,6 +85,7 @@ class TransportController extends Controller
         
 
             $nowstocks = Stock::all();
+   
             $choosestocks = Transport::all();
 
             $sum=0;
