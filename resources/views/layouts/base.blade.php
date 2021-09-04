@@ -13,6 +13,7 @@
         <link rel="stylesheet" href="{{ asset('css/transport.css') }}">
         <link rel="stylesheet" href="{{ asset('css/location.css') }}">
         <link rel="stylesheet" href="{{ asset('css/shipoutconfirm.css') }}">
+        <link rel="stylesheet" href="{{ asset('css/register.css') }}">
         <link rel="stylesheet" href="{{ asset('css/response/base.css') }}" media="screen and (max-width:480px)">
 
         <!-- Scripts -->

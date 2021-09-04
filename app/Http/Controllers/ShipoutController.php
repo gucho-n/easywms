@@ -71,6 +71,7 @@ class ShipoutController extends Controller
             $stocks = Stock::all();
         
             $judgeitem = 0;
+            
             foreach($stocks as $stock){
                 $judgeitem = $judgeitem + $stock["cases"];
             }
