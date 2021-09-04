@@ -23,8 +23,10 @@ class ListController extends Controller
     public function delete(Request $request){
         //モデル→変数→ビューへ
         $user = auth()->user();
-        $finish = Shipout::find($request->finish_id);
+        $finish = ResultList::find($request->finish_id);
+        
         ResultList::destroy($finish["id"]);
+        
         return redirect('/list');
     }
 

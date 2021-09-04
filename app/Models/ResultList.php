@@ -9,10 +9,10 @@ class ResultList extends Model
 {
     use HasFactory;
 
-    protected $fillable = ['shipto', 'cases','items','locationfrom'];
+    protected $fillable = ['shipto', 'cases','items','locationfrom','shipout_id'];
 
-    // public function shipout()
-    // {
-    //     return $this->hasOne('App\Models\Shipout');
-    // }
+    public function shipout()
+    {
+        return $this->hasOne('App\Models\Shipout','shipout_id');
+    }
 }

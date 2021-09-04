@@ -20,6 +20,9 @@ class CreateResultListsTable extends Migration
             $table->string('items');
             $table->integer('cases');
             $table->string('locationfrom');
+            $table->integer('shipout_id');
+
+            
         });
     }
 

@@ -134,6 +134,7 @@ class TransportController extends Controller
                     if($nowstock['cases']==0){
 
                     Stock::destroy($nowstock["id"]);
+                    
                     }
                 }
 

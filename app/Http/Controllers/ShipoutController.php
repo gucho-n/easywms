@@ -50,6 +50,7 @@ class ShipoutController extends Controller
         {   
             $request->all();
             $shipout = Shipout::find($request->id);
+            
             $user = auth()->user();
     
             return view ('shipoutconfirm', compact('shipout','user','request'));
@@ -62,41 +63,59 @@ class ShipoutController extends Controller
     
     //データを渡して保存
     public function update(Request $request)
-    {   
+    {  
             $shipout = Shipout::find($request->shipout_id);
-
+       
             $shipoutcases = $shipout["cases"];
 
             $stocks = Stock::all();
+        
+            $judgeitem = 0;
+            foreach($stocks as $stock){
+                $judgeitem = $judgeitem + $stock["cases"];
+            }
+
+        
+            if($judgeitem<$shipoutcases){
+                return redirect('/shipout');  
+            }
       
 
         foreach($stocks as $stock){
-
-            if ($stock["item"] == $shipout["item"]){
-                if($stock["cases"] - $shipoutcases>=0){
+           
+     
+            if ($stock["item"]==$shipout["item"]){
+                
+                if(($stock["cases"]-$shipoutcases)>=0){
+             
                 $stock["cases"] = $stock["cases"] - $shipoutcases;
+                    
+               
                 $stock->Update();
 
                 
-                $inputs=array('cases'=>$shipoutcases,'locationfrom'=>$stock["location"],'shipto'=>$shipout["customer"],'items'=>$shipout["item"]);
+                $inputs=array('cases'=>$shipoutcases,'locationfrom'=>$stock["location"],'shipto'=>$shipout["customer"],'items'=>$shipout["item"],'shipout_id'=>$shipout["id"]);
 
-
+                
                 ResultList::create($inputs);
+                return redirect('/shipin');
+                Shipout::destroy($shipout->id);
                 //ここからは0cs以下だったときの処理を書くこと
 
                 break;
                 }elseif($stock["cases"]-$shipoutcases<0){
-                    $shipoutcases = $shipoutcases - $stock["cases"]; 
-                    $inputs=array('cases'=>$shipoutcases,'locationfrom'=>$stock["location"],'shipto'=>$shipout["customer"],'items'=>$shipout["item"]);
+                    
+                    $inputs=array('cases'=>$stock["cases"],'locationfrom'=>$stock["location"],'shipto'=>$shipout["customer"],'items'=>$shipout["item"],'shipout_id'=>$shipout["id"]);
                     ResultList::create($inputs);
-
+                    $shipoutcases =  $shipoutcases - $stock["cases"];
                     $stock["cases"] = 0;
                     $stock->Update();
+                    // Shipout::destroy($shipout->id);
                 }
 
             }
             
-            return redirect('/shipout');
+            
        
         }
 

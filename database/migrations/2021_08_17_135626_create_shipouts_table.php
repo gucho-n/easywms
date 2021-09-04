@@ -20,6 +20,8 @@ class CreateShipoutsTable extends Migration
             $table->string('item');
             $table->integer('cases');
             $table->string('location');
+
+            
             
         });
     }
