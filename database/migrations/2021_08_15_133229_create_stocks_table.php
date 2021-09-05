@@ -21,7 +21,7 @@ class CreateStocksTable extends Migration
             $table->string('location');
             $table->string('inport_from');
             $table->string('other');
-            $table->increments('id');
+           
         });
     }
 
