@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Shipout;
 use App\Models\Stock;
-use App\Models\Resultlist;
+use App\Models\ResultList;
 use Illuminate\Support\Facades\Auth; //追加
 
 use Validator; // Validatorだけでも実行できる
