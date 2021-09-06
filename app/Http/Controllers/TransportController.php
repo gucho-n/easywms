@@ -63,7 +63,7 @@ class TransportController extends Controller
 
         }
 
-
+        return view ('/transportchoose', compact('choosestocks','user'));
     }
 
         public function update(Request $request)
